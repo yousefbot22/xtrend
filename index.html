@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Trend Company | شركة تصوير</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* إعدادات الألوان الأساسية */
+        :root {
+            --main-bg: #050505;
+            --red-neon: #ff0000; /* أحمر نيون ساطع */
+            --red-glow: rgba(255, 0, 0, 0.6);
+            --red-dark-bg: #2a0000; /* أحمر غامق جداً للخلفية */
+            --text-white: #ffffff;
+            --text-gray: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--main-bg);
+            color: var(--text-white);
+            background-image: radial-gradient(circle at top, #1a0000 0%, var(--main-bg) 60%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* الهيدر واللوجو */
+        header {
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+        .logo span { color: var(--red-neon); text-shadow: 0 0 10px var(--red-glow); }
+
+        /* العنوان الرئيسي */
+        .hero {
+            text-align: center;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero h1 span { color: var(--red-neon); text-shadow: 0 0 15px var(--red-glow); }
+
+        .hero p {
+            color: var(--text-gray);
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* أزرار الأقسام */
+        .category-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .cat-btn {
+            background: transparent;
+            color: var(--text-white);
+            border: 2px solid var(--red-neon);
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .cat-btn:hover, .cat-btn.active {
+            background: var(--red-neon);
+            box-shadow: 0 0 25px var(--red-neon);
+            transform: translateY(-3px);
+            color: #000;
+        }
+
+        /* حاوية الخدمات */
+        .services-container {
+            width: 100%;
+            max-width: 1300px;
+            padding: 20px;
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .services-container.active-section {
+            display: block;
+        }
+
+        /* كروت الباقات */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+            align-items: stretch;
+        }
+
+        /* التعديل الأهم: خلفية الكارت نفسها حمراء */
+        .service-card {
+            /* تدرج لوني من الأحمر الغامق للأسود */
+            background: linear-gradient(160deg, var(--red-dark-bg) 0%, var(--main-bg) 70%);
+            border: 1px solid rgba(255, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 25px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            /* إضاءة داخلية نيون + إضاءة خارجية */
+            box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.15), 0 0 15px rgba(255, 0, 0, 0.2);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--red-neon);
+            /* زيادة الإضاءة الحمراء داخل وخارج الكارت عند التمرير */
+            box-shadow: inset 0 0 30px rgba(255, 0, 0, 0.3), 0 0 30px var(--red-glow);
+        }
+
+        /* شريط النيون العلوي */
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20%;
+            right: 20%;
+            height: 3px;
+            background: var(--red-neon);
+            box-shadow: 0 0 15px var(--red-neon);
+            border-radius: 50%;
+        }
+
+        /* شارة الأكثر طلباً */
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--red-neon);
+            color: #000;
+            padding: 4px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 900;
+            box-shadow: 0 0 15px var(--red-neon);
+            white-space: nowrap;
+        }
+
+        /* عنوان الباقة */
+        .service-card h3 {
+            color: var(--text-white);
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 900;
+            background: rgba(255, 0, 0, 0.2); /* خلفية حمراء شفافة للعنوان */
+            padding: 8px;
+            border-radius: 8px;
+            border-bottom: 2px solid var(--red-neon);
+        }
+
+        .price {
+            font-size: 34px;
+            font-weight: 900;
+            color: var(--red-neon);
+            margin-bottom: 5px;
+            text-shadow: 0 0 15px var(--red-glow);
+        }
+
+        .currency {
+            font-size: 16px;
+            color: var(--text-gray);
+            font-weight: normal;
+            text-shadow: none;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--red-neon), transparent);
+            margin: 15px 0;
+            opacity: 0.7;
+        }
+
+        .service-card ul {
+            list-style: none;
+            color: var(--text-gray);
+            line-height: 1.6;
+            font-size: 14px;
+            text-align: right;
+            flex-grow: 1;
+        }
+
+        .service-card ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .service-card ul li::before {
+            content: '✔';
+            color: var(--red-neon);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+            text-shadow: 0 0 5px var(--red-glow);
+        }
+
+        /* زر احجز الآن */
+        .book-btn {
+            background: linear-gradient(45deg, #990000, var(--red-neon));
+            color: white;
+            border: none;
+            padding: 15px 60px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            box-shadow: 0 0 20px var(--red-glow);
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .book-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px var(--red-neon);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* التجاوب مع الموبايل */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            .category-buttons { flex-direction: column; width: 100%; }
+            .cat-btn { width: 100%; }
+            header { padding: 20px; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="logo">X <span>TREND</span> COMPANY</div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <div class="hero">
+        <h1>Your Content, <span>Our Creativity</span></h1>
+        <p>اختر القسم الذي تريد استكشاف باقاتنا وعروضنا الخاصة به</p>
+    </div>
+
+    <!-- أزرار الأقسام -->
+    <div class="category-buttons">
+        <button class="cat-btn active" onclick="showSection('social', this)">إدارة السوشيال ميديا</button>
+        <button class="cat-btn" onclick="showSection('stores', this)">تصوير المحلات</button>
+        <button class="cat-btn" onclick="showSection('teachers', this)">تصوير المدرسين</button>
+        <button class="cat-btn" onclick="showSection('content', this)">صناعة المحتوى</button>
+        <button class="cat-btn" onclick="showSection('podcast', this)">البودكاست</button>
+    </div>
+
+    <!-- 1. قسم إدارة السوشيال ميديا -->
+    <div id="social" class="services-container active-section">
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>باقة أساسية</h3>
+                <div class="price">2,500 <span class="currency">جنيه / شهرياً</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>إدارة منصات التواصل</li>
+                    <li>تصميمات جذابة</li>
+                    <li>مونتاج احترافي</li>
+                    <li>نشر محتوى منتظم</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>باقة ستاندرد</h3>
+                <div class="price">3,500 <span class="currency">جنيه / شهرياً</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>إدارة جميع المنصات</li>
+                    <li>تصميمات احترافية</li>
+                    <li>مونتاج فيديوهات</li>
+                    <li>متابعة التفاعل والنتائج</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="popular-badge">الأكثر طلباً</div>
+                <h3>باقة بريميوم</h3>
+                <div class="price">5,000 <span class="currency">جنيه / شهرياً</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>إدارة شاملة لجميع المنصات</li>
+                    <li>تصميمات إبداعية متميزة</li>
+                    <li>مونتاج احترافي للفيديوهات</li>
+                    <li>صناعة محتوى متكامل</li>
+                    <li>تطوير الهوية البصرية</li>
+                </ul>
+            </div>
+            <div class="service-card" style="justify-content: center; align-items: center;">
+                <h3>باقة مخصصة</h3>
+                <div class="price" style="font-size: 24px; margin: 20px 0;">حسب هدفك</div>
+                <div class="divider"></div>
+                <ul>
+                    <li>حلول تسويقية مخصصة</li>
+                    <li>تصميمات مبتكرة</li>
+                    <li>استراتيجية محتوى مناسبة</li>
+                    <li>أفكار إبداعية جديدة</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. قسم تصوير المحلات التجارية -->
+    <div id="stores" class="services-container">
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Starter</h3>
+                <div class="price">500 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>فيديو واحد</li>
+                    <li>تصوير احترافي</li>
+                    <li>مونتاج احترافي</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Basic</h3>
+                <div class="price">1,350 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>3 فيديوهات</li>
+                    <li>تصوير احترافي</li>
+                    <li>مونتاج احترافي</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Pro</h3>
+                <div class="price">2,000 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>5 فيديوهات</li>
+                    <li>تصوير احترافي</li>
+                    <li>مونتاج احترافي</li>
+                    <li>تصحيح ألوان وإضاءة</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Premium</h3>
+                <div class="price">4,000 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>10 فيديوهات</li>
+                    <li>تصوير احترافي</li>
+                    <li>مونتاج احترافي</li>
+                    <li>محتوى جاهز للنشر</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. قسم تصوير المدرسين -->
+    <div id="teachers" class="services-container">
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>ساعة تصوير</h3>
+                <div class="price">300 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>ساعة تصوير في الشركة</li>
+                    <li>تصوير احترافي</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>6 ساعات تصوير</h3>
+                <div class="price">1,500 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>6 ساعات تصوير فقط</li>
+                    <li>تصوير احترافي</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="popular-badge">عرض متكامل</div>
+                <h3>6 ساعات + 3 ريلز</h3>
+                <div class="price">2,500 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>6 ساعات تصوير</li>
+                    <li>2 ريلز في الشركة</li>
+                    <li>1 ريلز في الحصه</li>
+                    <li>محتوى يليق بطلابك</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. قسم صناعة المحتوى -->
+    <div id="content" class="services-container">
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Starter</h3>
+                <div class="price">600 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>تصوير فيديو واحد</li>
+                    <li>مونتاج احترافي</li>
+                    <li>تصحيح ألوان وإضاءة</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Basic</h3>
+                <div class="price">1,500 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>تصوير 3 فيديوهات</li>
+                    <li>مونتاج احترافي لكل فيديو</li>
+                    <li>تصحيح ألوان وصوت</li>
+                    <li>إضافة مؤثرات وانتقالات</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="popular-badge">الأكثر طلباً</div>
+                <h3>Pro</h3>
+                <div class="price">2,750 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>تصوير 5 فيديوهات</li>
+                    <li>مونتاج احترافي</li>
+                    <li>تنويع زوايا التصوير</li>
+                    <li>معالجة ألوان وصوت</li>
+                    <li>إضافة عناوين وحركات</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Premium</h3>
+                <div class="price">5,000 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>تصوير 10 فيديوهات</li>
+                    <li>مونتاج احترافي بالكامل</li>
+                    <li>تنويع الأفكار وزوايا التصوير</li>
+                    <li>معالجة ألوان وصوت</li>
+                    <li>محتوى جاهز للنشر</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Elite</h3>
+                <div class="price">5,700 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>تصوير 12 فيديو</li>
+                    <li>مونتاج احترافي</li>
+                    <li>أفكار متنوعة للمحتوى</li>
+                    <li>معالجة ألوان وصوت</li>
+                    <li>جرافيك وعناوين احترافية</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. قسم البودكاست -->
+    <div id="podcast" class="services-container">
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Starter</h3>
+                <div class="price">1,200 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>مدة التصوير: ساعة ونصف</li>
+                    <li>تجهيز الشركة للتسجيل</li>
+                    <li>تجربة الصوت قبل بداية التسجيل</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Standard</h3>
+                <div class="price">1,500 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>مدة التصوير: ساعتين</li>
+                    <li>تجهيز الشركة</li>
+                    <li>تجربة الصوت والإضاءة</li>
+                    <li>وقت إضافي للمحتوى والحلقات</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Professional</h3>
+                <div class="price">2,100 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>مدة التصوير: 3 ساعات</li>
+                    <li>تجهيز كامل للشركة</li>
+                    <li>مناسبة لتسجيل أكثر من حلقة</li>
+                    <li>مرونة أكبر في التصوير</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="popular-badge">الأفضل</div>
+                <h3>Premium</h3>
+                <div class="price">2,700 <span class="currency">جنيه</span></div>
+                <div class="divider"></div>
+                <ul>
+                    <li>مدة التصوير: 4 ساعات</li>
+                    <li>تجهيز كامل للشركة</li>
+                    <li>مناسبة لصناعة المحتوى والبرامج</li>
+                    <li>وقت كافٍ لتسجيل عدة حلقات</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- زر الحجز (يمكنك تغيير الرابط لرقم الواتساب الخاص بك) -->
+    <a href="https://wa.me/201014994070" target="_blank" class="book-btn">احجز باقتك الآن</a>
+
+    <!-- كود الجافاسكريبت للتفاعل -->
+    <script>
+        function showSection(sectionId, btnElement) {
+            // 1. إخفاء كل الأقسام
+            let sections = document.querySelectorAll('.services-container');
+            sections.forEach(function(section) {
+                section.classList.remove('active-section');
+            });
+
+            // 2. إزالة تأثير "النشط" من كل الأزرار
+            let buttons = document.querySelectorAll('.cat-btn');
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // 3. إظهار القسم المطلوب
+            document.getElementById(sectionId).classList.add('active-section');
+
+            // 4. إضافة تأثير "النشط" للزر الذي تم الضغط عليه
+            btnElement.classList.add('active');
+        }
+    </script>
+</body>
+</html>
