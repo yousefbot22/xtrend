@@ -2,933 +2,373 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0a0908">
-<meta name="description" content="X TREND COMPANY — استوديو إبداعي للتصوير وصناعة المحتوى وإدارة السوشيال ميديا والبوكاست.">
-<title>X TREND COMPANY | نصنع حضورك</title>
-
-<meta property="og:title" content="X TREND COMPANY | نصنع حضورك">
-<meta property="og:description" content="استوديو إبداعي للتصوير وصناعة المحتوى وإدارة السوشيال ميديا والبوكاست.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://i.ibb.co/N6wmf6hY/photo-2026-11-22-20-49-28.jpg">
-
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#06070b">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="X TREND COMPANY — شريكك الإبداعي في التصوير وصناعة المحتوى وإدارة السوشيال ميديا والبودكاست.">
+<title>X TREND COMPANY | شريكك الإبداعي</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  /* ============================================================
-     الهوية الجديدة: Obsidian & Ember
-     - Obsidian: #0a0908 (شبه أسود دافئ)
-     - Ember: #ff6a2b (برتقالي محروق)
-     - Gold: #e8b04b (ذهبي فاخر)
-     - Ink: #131110 (طبقة أعمق)
-     ============================================================ */
-  :root{
-    --obsidian:#0a0908;
-    --ink:#131110;
-    --ember:#ff6a2b;
-    --ember-soft:rgba(255,106,43,.35);
-    --gold:#e8b04b;
-    --paper:#f5f0ea;
-    --muted:#9a9188;
-    --line:rgba(255,255,255,.08);
-    --glass:rgba(20,17,15,.55);
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;scroll-padding-top:100px}
-  body{
-    font-family:'Cairo',sans-serif;
-    background:var(--obsidian);
-    color:var(--paper);
-    line-height:1.75;
-    overflow-x:hidden;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  /* خلفية فخمة: تدرجات دافئة + شبكة خفيفة */
-  body::before{
-    content:"";
-    position:fixed;inset:0;z-index:-2;
-    background:
-      radial-gradient(ellipse 80% 60% at 85% 0%, rgba(255,106,43,.14), transparent 55%),
-      radial-gradient(ellipse 70% 50% at 0% 50%, rgba(232,176,75,.07), transparent 55%),
-      radial-gradient(ellipse 60% 40% at 50% 100%, rgba(255,106,43,.06), transparent 60%);
-    pointer-events:none;
-  }
-  body::after{
-    content:"";
-    position:fixed;inset:0;z-index:-1;
-    background-image:
-      linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-    background-size:80px 80px;
-    mask-image:radial-gradient(ellipse 70% 70% at 50% 0%, #000 20%, transparent 75%);
-    -webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 0%, #000 20%, transparent 75%);
-    pointer-events:none;
-  }
-
-  a{color:inherit;text-decoration:none}
-  button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
-  img{max-width:100%;display:block}
-  .container{width:min(1240px, calc(100% - 48px));margin:auto}
-  .section{padding:130px 0;position:relative}
-
-  /* ===== Typography ===== */
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:12px;
-    font-family:'Space Grotesk',sans-serif;
-    color:var(--gold);font-size:11px;font-weight:600;
-    letter-spacing:.3em;text-transform:uppercase;margin-bottom:18px;
-  }
-  .eyebrow::before{
-    content:"";width:36px;height:1px;background:var(--gold);
-    transform-origin:right;animation:lineGrow 1s ease forwards;
-  }
-  @keyframes lineGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-
-  .display{
-    font-family:'Cairo',sans-serif;
-    font-size:clamp(40px,5.5vw,72px);
-    line-height:1.1;font-weight:900;letter-spacing:-2px;
-    margin-bottom:24px;
-  }
-  .display em{font-style:normal;color:var(--ember);position:relative;display:inline-block}
-  .display em::after{
-    content:"";position:absolute;left:0;right:0;bottom:8px;height:10px;
-    background:linear-gradient(90deg,var(--ember),var(--gold));
-    opacity:.18;z-index:-1;transform:scaleX(0);transform-origin:right;
-    animation:mark 1s .6s cubic-bezier(.2,.7,.2,1) forwards;
-  }
-  @keyframes mark{to{transform:scaleX(1)}}
-  .accent{color:var(--ember)}
-  .accent-gold{color:var(--gold)}
-
-  .section-head{max-width:820px;margin-bottom:70px}
-  .section-head h2{font-size:clamp(34px,4.5vw,52px);line-height:1.15;font-weight:900;letter-spacing:-1.5px;margin-bottom:20px}
-  .section-head p{color:var(--muted);font-size:16px;max-width:620px}
-
-  /* ===== Reveal ===== */
-  .reveal{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-  .reveal.visible{opacity:1;transform:none}
-  .reveal[data-delay="1"]{transition-delay:.08s}
-  .reveal[data-delay="2"]{transition-delay:.16s}
-  .reveal[data-delay="3"]{transition-delay:.24s}
-  .reveal[data-delay="4"]{transition-delay:.32s}
-
-  /* ===== Scroll progress ===== */
-  .scroll-progress{
-    position:fixed;top:0;left:0;height:2px;width:0%;z-index:200;
-    background:linear-gradient(90deg,var(--ember),var(--gold));
-    box-shadow:0 0 12px var(--ember-soft);transition:width .1s linear;
-  }
-
-  /* ===== Cursor ===== */
-  .cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%)}
-  .cursor-dot{width:5px;height:5px;background:var(--gold);box-shadow:0 0 10px var(--gold)}
-  .cursor-ring{width:36px;height:36px;border:1px solid rgba(232,176,75,.5);transition:width .25s,height .25s,background .25s,border-color .25s}
-  .cursor-ring.hover{width:60px;height:60px;background:rgba(255,106,43,.12);border-color:var(--ember)}
-  @media(max-width:1024px){.cursor-dot,.cursor-ring{display:none}}
-
-  /* ===== Topbar ===== */
-  .topbar{
-    position:fixed;top:0;left:0;right:0;z-index:100;
-    background:rgba(10,9,8,.55);
-    backdrop-filter:blur(24px) saturate(140%);
-    -webkit-backdrop-filter:blur(24px) saturate(140%);
-    border-bottom:1px solid transparent;
-    transition:background .4s,border-color .4s,box-shadow .4s;
-  }
-  .topbar.scrolled{
-    background:rgba(10,9,8,.85);
-    border-bottom-color:var(--line);
-    box-shadow:0 20px 40px rgba(0,0,0,.4);
-  }
-  .nav{height:86px;display:flex;align-items:center;justify-content:space-between}
-  .brand{display:flex;align-items:center;gap:14px;font-family:'Syne',sans-serif;font-weight:800;font-size:17px;letter-spacing:.5px;direction:ltr}
-  .brand span span{color:var(--ember)}
-  .brand-logo{
-    width:46px;height:46px;border-radius:50%;
-    border:1px solid rgba(255,106,43,.55);
-    box-shadow:0 0 30px rgba(255,106,43,.25);
-    object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .4s;
-  }
-  .brand:hover .brand-logo{transform:rotate(360deg);box-shadow:0 0 40px rgba(255,106,43,.5)}
-
-  .nav-links{display:flex;gap:32px;font-size:13px;font-weight:600}
-  .nav-links a{transition:color .3s;position:relative;padding:4px 0}
-  .nav-links a::after{content:"";position:absolute;bottom:-3px;right:0;width:0;height:1px;background:var(--gold);transition:width .35s cubic-bezier(.2,.7,.2,1)}
-  .nav-links a:hover{color:var(--gold)}
-  .nav-links a:hover::after{width:100%}
-
-  .nav-cta{
-    padding:11px 22px;font-size:12.5px;font-weight:700;border-radius:999px;
-    background:var(--ember);color:#120a06;
-    box-shadow:0 8px 24px rgba(255,106,43,.25);
-    transition:transform .3s,box-shadow .3s;
-    position:relative;overflow:hidden;
-  }
-  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(255,106,43,.45)}
-
-  /* ===== Buttons ===== */
-  .btn-primary,.btn-outline{
-    display:inline-flex;align-items:center;gap:10px;
-    padding:15px 30px;border-radius:999px;font-weight:700;font-size:14.5px;
-    transition:transform .3s,box-shadow .3s,background .3s,border-color .3s;
-    position:relative;overflow:hidden;
-  }
-  .btn-primary{background:linear-gradient(135deg,var(--ember),#ff8a55);color:#140a04;box-shadow:0 10px 30px rgba(255,106,43,.3)}
-  .btn-primary::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);transform:translateX(-120%);transition:transform .7s}
-  .btn-primary:hover::before{transform:translateX(120%)}
-  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(255,106,43,.5)}
-  .btn-outline{border:1px solid rgba(255,255,255,.18);color:var(--paper);background:rgba(255,255,255,.02)}
-  .btn-outline:hover{background:rgba(255,255,255,.06);border-color:var(--gold);transform:translateY(-3px)}
-
-  /* ===== Hero ===== */
-  .hero{padding:190px 0 110px;min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
-  .hero-grid{display:grid;grid-template-columns:1.05fr 1.15fr;gap:60px;align-items:center;width:100%}
-  .hero-copy{color:var(--muted);font-size:16px;line-height:2;max-width:520px;margin-bottom:38px}
-  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-
-  .hero-art{position:relative;height:620px;display:flex;align-items:center;justify-content:center;perspective:1200px}
-  .hero-wordmark{
-    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-    font-family:'Syne',sans-serif;font-weight:800;
-    font-size:clamp(90px,14vw,190px);letter-spacing:-8px;line-height:1;
-    background:linear-gradient(180deg,var(--ember) 0%,rgba(255,106,43,.05) 90%);
-    -webkit-background-clip:text;background-clip:text;
-    -webkit-text-fill-color:transparent;opacity:.75;z-index:1;
-    animation:floatSlow 7s ease-in-out infinite;white-space:nowrap;
-  }
-  @keyframes floatSlow{0%,100%{transform:translate(-50%,-50%)}50%{transform:translate(-50%,-53%)}}
-
-  .hero-photo{
-    position:absolute;z-index:2;width:82%;height:90%;
-    background:url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1100&q=88') center 25%/cover;
-    filter:grayscale(1) contrast(1.15) sepia(.08);
-    mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);
-    -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);
-    border-radius:240px 240px 0 0;
-    transition:transform .4s ease-out;
-    will-change:transform;
-  }
-  .hero-photo::after{
-    content:"";position:absolute;inset:0;border-radius:inherit;
-    background:linear-gradient(180deg,transparent 50%,rgba(255,106,43,.12) 100%);
-    pointer-events:none;
-  }
-
-  .hero-stat{
-    position:absolute;bottom:10px;left:0;z-index:3;
-    display:flex;gap:24px;padding:18px 26px;
-    background:var(--glass);backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-    border:1px solid var(--line);border-radius:14px;
-  }
-  .hero-stat b{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:32px;line-height:1;display:block;color:var(--paper)}
-  .hero-stat span{display:block;font-size:9.5px;color:var(--muted);letter-spacing:.2em;margin-top:6px;font-family:'Space Grotesk',sans-serif}
-  .hero-stat i{width:1px;background:var(--line)}
-
-  /* ===== Trust strip ===== */
-  .trust{border-block:1px solid var(--line);background:rgba(255,255,255,.012);position:relative;overflow:hidden}
-  .trust::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,106,43,.06),transparent);animation:shimmer 6s linear infinite}
-  @keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-  .trust-row{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;padding:34px 0;position:relative}
-  .trust-item{border-left:1px solid var(--line);padding:8px}
-  .trust-item:last-child{border:none}
-  .trust-item b{display:block;font-size:14.5px;color:var(--paper);font-weight:700}
-  .trust-item span{font-size:11.5px;color:var(--muted);letter-spacing:.05em}
-
-  /* ===== Services ===== */
-  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .service-tile{
-    background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.008));
-    border:1px solid var(--line);border-radius:18px;padding:38px 30px;
-    position:relative;overflow:hidden;transition:transform .5s cubic-bezier(.2,.7,.2,1),border-color .4s,background .4s;
-    min-height:270px;display:flex;flex-direction:column;justify-content:space-between;
-  }
-  .service-tile::before{
-    content:"";position:absolute;inset:0;
-    background:radial-gradient(600px circle at var(--mx,50%) var(--my,50%),rgba(255,106,43,.14),transparent 45%);
-    opacity:0;transition:opacity .4s;pointer-events:none;
-  }
-  .service-tile:hover::before{opacity:1}
-  .service-tile::after{
-    content:"";position:absolute;inset:auto -60px -80px auto;width:170px;height:170px;
-    border:1px solid rgba(232,176,75,.18);border-radius:50%;transition:transform .6s ease;
-  }
-  .service-tile:hover{border-color:rgba(255,106,43,.5);transform:translateY(-6px)}
-  .service-tile:hover::after{transform:scale(1.6)}
-  .service-icon{
-    width:54px;height:54px;border-radius:14px;
-    background:linear-gradient(135deg,rgba(255,106,43,.18),rgba(232,176,75,.08));
-    border:1px solid rgba(255,106,43,.3);
-    display:grid;place-items:center;color:var(--ember);font-size:22px;
-    margin-bottom:26px;position:relative;z-index:2;
-    transition:transform .5s cubic-bezier(.2,.7,.2,1);
-  }
-  .service-tile:hover .service-icon{transform:rotate(-8deg) scale(1.1);color:var(--gold)}
-  .service-tile h3{font-size:19.5px;font-weight:800;margin-bottom:10px;position:relative;z-index:2;letter-spacing:-.3px}
-  .service-tile p{color:var(--muted);font-size:13.5px;line-height:1.85;position:relative;z-index:2}
-  .service-tile:nth-child(1){grid-column:span 2}
-  .service-tile:nth-child(4){grid-column:span 2}
-
-  /* ===== Portfolio ===== */
-  .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .work-card{
-    border:1px solid var(--line);border-radius:18px;background:var(--ink);
-    overflow:hidden;transition:transform .5s cubic-bezier(.2,.7,.2,1),border-color .4s,box-shadow .4s;
-    position:relative;cursor:pointer;
-  }
-  .work-card:hover{border-color:rgba(255,106,43,.5);transform:translateY(-6px);box-shadow:0 30px 60px rgba(0,0,0,.5)}
-  .work-visual{
-    height:290px;
-    background:
-      radial-gradient(circle at 30% 20%, rgba(255,106,43,.18), transparent 50%),
-      radial-gradient(circle at 70% 80%, rgba(232,176,75,.14), transparent 50%),
-      linear-gradient(135deg,#1a1110,#0d0b0a 60%,#1f0d08);
-    display:grid;place-items:center;position:relative;overflow:hidden;
-  }
-  .work-visual::before{
-    content:"";position:absolute;width:210px;height:210px;
-    border:1px solid rgba(255,255,255,.12);border-radius:50%;
-    transition:transform .7s cubic-bezier(.2,.7,.2,1);
-  }
-  .work-visual::after{
-    content:"";position:absolute;width:130px;height:130px;
-    border:1px solid var(--ember);transform:rotate(45deg);
-    box-shadow:0 0 40px var(--ember-soft);transition:transform .7s cubic-bezier(.2,.7,.2,1);
-  }
-  .work-card:hover .work-visual::before{transform:scale(1.18) rotate(45deg)}
-  .work-card:hover .work-visual::after{transform:rotate(90deg) scale(1.12)}
-  .visual-word{
-    font-family:'Syne',sans-serif;font-weight:800;font-size:34px;letter-spacing:-2px;
-    color:var(--paper);z-index:2;text-shadow:0 10px 30px #000;line-height:1.1;text-align:center;
-    transition:transform .4s;
-  }
-  .work-card:hover .visual-word{transform:scale(1.06)}
-  .play{
-    position:absolute;z-index:3;width:58px;height:58px;background:var(--ember);
-    border-radius:50%;display:grid;place-items:center;color:#140a04;font-size:18px;
-    box-shadow:0 0 30px var(--ember-soft);top:50%;left:50%;
-    transform:translate(-50%,-50%) scale(.6);opacity:0;
-    transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1);
-  }
-  .work-card:hover .play{opacity:1;transform:translate(-50%,-50%) scale(1)}
-  .work-meta{padding:26px 24px}
-  .work-meta small{color:var(--gold);font-size:10.5px;font-weight:700;letter-spacing:.2em;font-family:'Space Grotesk',sans-serif}
-  .work-meta h3{font-size:17px;margin:10px 0 6px;color:var(--paper);font-weight:800}
-  .work-meta p{font-size:13px;color:var(--muted)}
-
-  /* ===== Lightbox ===== */
-  .lightbox{position:fixed;inset:0;background:rgba(5,4,3,.94);backdrop-filter:blur(10px);z-index:500;display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .3s}
-  .lightbox.open{opacity:1;pointer-events:auto}
-  .lightbox-inner{
-    width:min(960px,92%);aspect-ratio:16/9;
-    background:
-      radial-gradient(circle at 30% 20%, rgba(255,106,43,.25), transparent 55%),
-      radial-gradient(circle at 70% 80%, rgba(232,176,75,.18), transparent 55%),
-      linear-gradient(135deg,#1a1110,#0a0908);
-    border:1px solid rgba(255,106,43,.4);border-radius:18px;
-    display:grid;place-items:center;position:relative;
-    box-shadow:0 0 80px rgba(255,106,43,.2);
-    transform:scale(.96);transition:transform .35s cubic-bezier(.2,.7,.2,1);
-  }
-  .lightbox.open .lightbox-inner{transform:scale(1)}
-  .lightbox-inner span{
-    font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,5vw,56px);letter-spacing:-2px;
-    background:linear-gradient(180deg,var(--ember),rgba(255,106,43,.2));
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-    text-align:center;padding:0 20px;
-  }
-  .lightbox-close{position:absolute;top:-52px;left:0;font-size:26px;color:var(--paper);cursor:pointer;transition:transform .3s,color .3s;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line)}
-  .lightbox-close:hover{color:var(--ember);transform:rotate(90deg);border-color:var(--ember)}
-
-  /* ===== Pricing ===== */
-  .pricing-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:44px;padding:6px;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:999px;width:fit-content}
-  .tab{
-    padding:11px 20px;border-radius:999px;color:var(--muted);font-size:13px;font-weight:600;
-    transition:background .3s,color .3s;background:transparent;white-space:nowrap;
-  }
-  .tab.active{background:var(--ember);color:#140a04;box-shadow:0 6px 18px rgba(255,106,43,.3)}
-  .tab:hover:not(.active){color:var(--paper);background:rgba(255,255,255,.05)}
-
-  .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-  .price-card{
-    background:linear-gradient(165deg,#161311,#0b0a09 75%);
-    border:1px solid var(--line);border-radius:20px;padding:40px 30px;
-    position:relative;display:flex;flex-direction:column;transition:transform .4s,border-color .4s,box-shadow .4s;
-    animation:cardIn .55s cubic-bezier(.2,.7,.2,1) both;overflow:hidden;
-  }
-  .price-card::before{
-    content:"";position:absolute;top:0;left:0;right:0;height:1px;
-    background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.4;
-  }
-  @keyframes cardIn{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:none}}
-  .price-card:hover{border-color:rgba(255,106,43,.45);transform:translateY(-6px);box-shadow:0 30px 60px rgba(0,0,0,.45)}
-  .price-card.featured{
-    border-color:rgba(255,106,43,.7);
-    background:linear-gradient(165deg,#241210,#0b0a09 75%);
-    box-shadow:0 0 60px rgba(255,106,43,.12);
-  }
-  .popular{
-    position:absolute;top:-14px;left:50%;transform:translateX(-50%);
-    background:linear-gradient(135deg,var(--ember),var(--gold));color:#140a04;
-    padding:6px 16px;border-radius:999px;font-size:10.5px;font-weight:800;
-    letter-spacing:.1em;box-shadow:0 8px 20px rgba(255,106,43,.4);white-space:nowrap;
-    animation:pulse 2.4s ease-in-out infinite;
-  }
-  @keyframes pulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.06)}}
-  .price-card h3{font-size:20px;font-weight:800;margin-bottom:14px;color:var(--paper);letter-spacing:-.3px}
-  .price{font-family:'Space Grotesk',sans-serif;font-size:46px;font-weight:700;color:var(--paper);line-height:1;margin-bottom:26px}
-  .price small{font-family:'Cairo',sans-serif;font-size:13px;color:var(--muted);font-weight:500}
-  .features{list-style:none;margin-bottom:30px;flex-grow:1}
-  .features li{font-size:13px;color:#c9c1b8;margin-bottom:12px;padding-right:24px;position:relative}
-  .features li::before{content:"✓";position:absolute;right:0;top:0;color:var(--ember);font-weight:900;font-size:14px}
-  .choose-plan{
-    width:100%;padding:14px;border:1px solid rgba(255,106,43,.4);border-radius:12px;
-    color:var(--paper);font-weight:700;font-size:13.5px;transition:.3s;background:rgba(255,106,43,.05);
-  }
-  .choose-plan:hover{background:var(--ember);border-color:var(--ember);color:#140a04;box-shadow:0 10px 25px rgba(255,106,43,.35);transform:translateY(-2px)}
-
-  /* ===== About ===== */
-  .about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center}
-  .about-panel{
-    background:
-      radial-gradient(ellipse at bottom,rgba(255,106,43,.22),transparent 60%),
-      linear-gradient(165deg,#161311,#0a0908 75%);
-    border:1px solid var(--line);border-radius:20px;padding:44px;
-    height:420px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-    position:relative;overflow:hidden;
-  }
-  .about-panel::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 100%,rgba(232,176,75,.08),transparent 60%)}
-  .big-x{
-    font-family:'Syne',sans-serif;font-size:170px;font-weight:800;line-height:1;margin-bottom:14px;
-    background:linear-gradient(180deg,var(--ember),rgba(255,106,43,.05));
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-    animation:floatX 5s ease-in-out infinite;
-  }
-  @keyframes floatX{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-  .about-panel p{color:#c9c1b8;font-size:14.5px;line-height:1.95;position:relative;z-index:2}
-
-  .about-copy h2{font-size:clamp(30px,3.5vw,40px);margin-bottom:20px;color:var(--paper);line-height:1.2;letter-spacing:-1px;font-weight:900}
-  .about-copy > p{color:var(--muted);font-size:15px;margin-bottom:32px;line-height:2}
-
-  .process{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
-  .step{
-    border-top:2px solid var(--ember);background:rgba(255,255,255,.025);
-    padding:22px 18px;border-radius:0 0 14px 14px;transition:.35s;
-  }
-  .step:hover{background:rgba(255,106,43,.06);transform:translateY(-4px)}
-  .step b{font-family:'Space Grotesk',sans-serif;font-size:22px;color:var(--ember);display:block;margin-bottom:10px;font-weight:700}
-  .step span{font-size:13.5px;font-weight:800;display:block;color:var(--paper);margin-bottom:4px}
-  .step small{font-size:11.5px;color:var(--muted);line-height:1.5;display:block}
-
-  /* ===== Testimonials ===== */
-  .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .quote{
-    background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.008));
-    border:1px solid var(--line);border-radius:18px;padding:32px;
-    transition:transform .4s,border-color .4s;position:relative;
-  }
-  .quote::before{
-    content:'"';position:absolute;top:8px;left:20px;font-family:'Syne',sans-serif;
-    font-size:80px;line-height:1;color:rgba(255,106,43,.15);font-weight:800;
-  }
-  .quote:hover{border-color:rgba(255,106,43,.4);transform:translateY(-5px)}
-  .stars{color:var(--gold);letter-spacing:3px;font-size:14px;margin-bottom:16px;position:relative;z-index:2}
-  .quote p{font-size:13.5px;color:#c9c1b8;line-height:1.95;margin-bottom:22px;position:relative;z-index:2}
-  .quote strong{display:block;font-size:14.5px;color:var(--paper);font-weight:800}
-  .quote small{display:block;font-size:11.5px;color:var(--muted);margin-top:5px}
-
-  /* ===== FAQ ===== */
-  .faq{max-width:820px}
-  .faq-item{
-    border:1px solid var(--line);border-radius:14px;margin-bottom:12px;
-    overflow:hidden;transition:border-color .3s,background .3s;background:rgba(255,255,255,.018);
-  }
-  .faq-item:hover{border-color:rgba(255,106,43,.3)}
-  .faq-item.open{border-color:rgba(255,106,43,.5);background:rgba(255,106,43,.03)}
-  .faq-q{
-    width:100%;text-align:right;padding:22px 26px;display:flex;justify-content:space-between;
-    align-items:center;font-weight:700;font-size:15px;color:var(--paper);gap:20px;
-  }
-  .faq-q span:last-child{color:var(--ember);font-size:22px;transition:transform .35s cubic-bezier(.2,.7,.2,1);flex-shrink:0}
-  .faq-item.open .faq-q span:last-child{transform:rotate(45deg)}
-  .faq-a{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.2,.7,.2,1);padding:0 26px;color:var(--muted);font-size:14px;line-height:1.85}
-  .faq-item.open .faq-a{max-height:240px;padding-bottom:22px}
-
-  /* ===== Contact ===== */
-  .contact-box{
-    border:1px solid rgba(255,106,43,.25);border-radius:22px;
-    background:
-      radial-gradient(ellipse at bottom right,rgba(255,106,43,.12),transparent 60%),
-      linear-gradient(165deg,#141110,#0a0908 70%);
-    padding:64px;display:grid;grid-template-columns:1fr 1.15fr;gap:64px;
-    position:relative;overflow:hidden;
-  }
-  .contact-box::before{content:"";position:absolute;top:-50%;left:-20%;width:400px;height:400px;background:radial-gradient(circle,rgba(232,176,75,.06),transparent 70%);pointer-events:none}
-  .contact-copy h2{font-size:clamp(28px,3.5vw,38px);margin-bottom:20px;line-height:1.25;font-weight:900;letter-spacing:-1px}
-  .contact-copy > p{color:var(--muted);font-size:15px;margin-bottom:32px;line-height:1.9}
-  .contact-links{display:flex;flex-direction:column;gap:16px;font-size:14.5px;color:var(--paper)}
-  .contact-links a{color:var(--ember);font-weight:700;transition:color .3s,letter-spacing .3s;display:inline-block;width:fit-content}
-  .contact-links a:hover{color:var(--gold);letter-spacing:1px}
-
-  .booking-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .field{display:flex;flex-direction:column;gap:8px}
-  .field.full{grid-column:1/-1}
-  .field label{font-size:11.5px;color:#c9c1b8;font-weight:700;letter-spacing:.02em}
-  .field input,.field select,.field textarea{
-    background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.12);border-radius:10px;
-    padding:14px 16px;color:var(--paper);font-family:inherit;font-size:14px;outline:none;transition:.3s;
-  }
-  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ember);box-shadow:0 0 0 3px rgba(255,106,43,.12);background:rgba(0,0,0,.5)}
-  .field textarea{resize:vertical;min-height:100px}
-  .booking-form .btn-primary{grid-column:1/-1;padding:16px;font-size:15px;margin-top:8px;justify-content:center}
-
-  /* ===== Footer ===== */
-  footer{border-top:1px solid var(--line);padding:44px 0;margin-top:50px;background:rgba(0,0,0,.3)}
-  .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;color:var(--muted);font-size:12.5px}
-  .footer-links{display:flex;gap:28px}
-  .footer-links a{transition:color .3s}
-  .footer-links a:hover{color:var(--gold)}
-
-  /* ===== Floating ===== */
-  .whatsapp-float{
-    position:fixed;bottom:28px;left:28px;width:58px;height:58px;
-    background:#25d366;border-radius:50%;display:grid;place-items:center;
-    color:#fff;font-size:26px;box-shadow:0 12px 30px rgba(37,211,102,.4);
-    z-index:99;transition:transform .3s;animation:waPulse 2.6s infinite;
-  }
-  @keyframes waPulse{0%,100%{box-shadow:0 12px 30px rgba(37,211,102,.4)}50%{box-shadow:0 12px 45px rgba(37,211,102,.7)}}
-  .whatsapp-float:hover{transform:scale(1.1) translateY(-4px)}
-  .to-top{
-    position:fixed;bottom:28px;right:28px;width:46px;height:46px;border-radius:50%;
-    background:rgba(255,106,43,.12);border:1px solid rgba(255,106,43,.45);color:var(--ember);
-    display:grid;place-items:center;z-index:99;opacity:0;pointer-events:none;
-    transition:opacity .3s,transform .3s,background .3s;font-size:17px;
-  }
-  .to-top.show{opacity:1;pointer-events:auto}
-  .to-top:hover{background:var(--ember);color:#140a04;transform:translateY(-3px)}
-
-  /* ===== Responsive ===== */
-  @media(max-width:1024px){
-    .hero-grid,.about-grid,.contact-box{grid-template-columns:1fr;gap:44px}
-    .hero{padding:140px 0 80px;text-align:center}
-    .hero-actions{justify-content:center}
-    .hero-copy{margin:0 auto 32px}
-    .hero-art{height:460px}
-    .services-grid,.portfolio-grid,.testimonials{grid-template-columns:1fr 1fr}
-    .service-tile:nth-child(1),.service-tile:nth-child(4){grid-column:span 1}
-    .contact-box{padding:44px}
-    .nav-links{display:none}
-    .pricing-tabs{border-radius:16px}
-  }
-  @media(max-width:768px){
-    .services-grid,.portfolio-grid,.testimonials,.process{grid-template-columns:1fr}
-    .booking-form{grid-template-columns:1fr}
-    .field.full{grid-column:auto}
-    .display{font-size:38px;letter-spacing:-1px}
-    .hero-art{height:400px}
-    .trust-row{grid-template-columns:1fr 1fr;gap:18px}
-    .trust-item{border:none}
-    .contact-copy h2{font-size:26px}
-    .section{padding:80px 0}
-    .brand-logo{width:40px;height:40px}
-    .to-top{right:20px;bottom:96px}
-    .whatsapp-float{left:20px;bottom:20px;width:52px;height:52px;font-size:22px}
-    .pricing-tabs{width:100%;justify-content:center}
-    .tab{padding:9px 14px;font-size:12px}
-  }
-  @media(prefers-reduced-motion:reduce){
-    *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
-  }
+:root{--bg:#06070b;--s1:#0c0e15;--s2:#121520;--line:rgba(255,255,255,.08);--tx:#eef0f6;--mu:#8b92a6;--pr:#4d5bff;--pr2:#7b86ff;--lm:#d4ff3a;--r:20px;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px;height:auto}
+body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:var(--tx);line-height:1.8;overflow-x:hidden;-webkit-font-smoothing:antialiased;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{width:min(1200px,calc(100% - 40px));margin:auto}
+.sec{padding:120px 0;position:relative}
+.num{font-family:'Space Grotesk',sans-serif}
+.tag{display:inline-flex;align-items:center;gap:10px;font:600 12px 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--lm);margin-bottom:18px}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lm);box-shadow:0 0 12px var(--lm)}
+h2.t{font-size:clamp(32px,4.4vw,56px);line-height:1.2;font-weight:700;letter-spacing:-1px;margin-bottom:16px}
+.lead{color:var(--mu);max-width:600px;font-size:16px}
+.grad{background:linear-gradient(100deg,var(--pr2),var(--lm));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.head{margin-bottom:60px}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.on{opacity:1;transform:none}
+.bar{position:fixed;top:0;right:0;height:3px;width:0;z-index:300;background:linear-gradient(90deg,var(--pr),var(--lm))}
+/* preloader */
+.pre{position:fixed;inset:0;z-index:999;background:var(--bg);display:grid;place-items:center;transition:opacity .6s,visibility .6s}
+.pre.off{opacity:0;visibility:hidden}
+.pre svg{width:72px;animation:spin 1.6s ease-in-out infinite}
+@keyframes spin{50%{transform:rotate(180deg) scale(.85)}100%{transform:rotate(360deg)}}
+/* nav */
+.nav{position:fixed;top:0;right:0;left:0;z-index:200;padding-top:env(safe-area-inset-top,0px);transition:.4s}
+.nav.sc{background:rgba(6,7,11,.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.nav .wrap{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font:700 17px 'Space Grotesk',sans-serif;direction:ltr;letter-spacing:.5px}
+.brand svg{width:38px;height:38px}.brand i{font-style:normal;color:var(--lm)}
+.links{display:flex;gap:30px;font-size:14px;font-weight:500;color:var(--mu)}
+.links a{transition:.3s}.links a:hover{color:var(--tx)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:14.5px;transition:.35s;position:relative;overflow:hidden}
+.btn.p{background:var(--lm);color:#0a0d02}.btn.p:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(212,255,58,.3)}
+.btn.o{border:1px solid rgba(255,255,255,.2)}.btn.o:hover{border-color:var(--pr2);background:rgba(77,91,255,.12);transform:translateY(-3px)}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+.burger span{width:18px;height:2px;background:var(--tx);transition:.3s}
+.burger.x span:first-child{transform:translateY(7px) rotate(45deg)}.burger.x span:last-child{transform:translateY(-7px) rotate(-45deg)}.burger.x span:nth-child(2){opacity:0}
+.mob{position:fixed;inset:0;z-index:190;background:rgba(6,7,11,.97);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:26px;font-size:28px;font-weight:600;opacity:0;visibility:hidden;transition:.4s}
+.mob.open{opacity:1;visibility:visible}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:150px 0 90px;position:relative;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;animation:drift 14s ease-in-out infinite alternate;pointer-events:none}
+.o1{width:520px;height:520px;background:var(--pr);top:-120px;left:-100px}
+.o2{width:380px;height:380px;background:#a3c40f;bottom:-120px;right:20%;opacity:.22;animation-delay:-5s}
+@keyframes drift{to{transform:translate(70px,50px) scale(1.15)}}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:70px 70px;-webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 40%,#000,transparent 75%);mask-image:radial-gradient(ellipse 60% 60% at 50% 40%,#000,transparent 75%);pointer-events:none}
+.hg{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03);font-size:13px;color:var(--mu);margin-bottom:26px}
+.pill b{width:8px;height:8px;border-radius:50%;background:var(--lm);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+h1{font-size:clamp(40px,6vw,84px);line-height:1.08;font-weight:700;letter-spacing:-2px;margin-bottom:24px}
+.rot{display:inline-block;position:relative;height:1.15em;overflow:hidden;vertical-align:bottom}
+.rot span{display:block;transition:transform .6s cubic-bezier(.7,0,.2,1)}
+.hero p.lead{margin-bottom:36px;font-size:17px}
+.acts{display:flex;gap:14px;flex-wrap:wrap}
+.vis{position:relative;height:540px}
+.card{position:absolute;background:rgba(18,21,32,.7);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.c1{top:10px;right:0;left:50px;animation:fl 6s ease-in-out infinite}
+.c2{bottom:70px;left:0;width:210px;animation:fl 7s -2s ease-in-out infinite}
+.c3{bottom:0;right:20px;width:250px;animation:fl 5s -1s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-14px)}}
+.card small{color:var(--mu);font-size:12px;display:block}
+.card .big{font:700 40px 'Space Grotesk',sans-serif;line-height:1.1;margin:6px 0 16px}
+.bars{display:flex;align-items:flex-end;gap:9px;height:130px}
+.bars i{flex:1;border-radius:8px 8px 3px 3px;background:linear-gradient(180deg,var(--pr2),var(--pr));transform-origin:bottom;animation:grow 1.2s cubic-bezier(.2,.7,.2,1) both}
+.bars i:nth-child(n+6){background:linear-gradient(180deg,var(--lm),#8fb800)}
+@keyframes grow{from{transform:scaleY(0)}}
+.rec{display:flex;align-items:center;gap:10px;font-weight:600}.rec b{width:12px;height:12px;border-radius:50%;background:#ff3b4e;animation:blink 1s infinite}
+.wave{display:flex;gap:4px;align-items:center;height:44px;margin-top:14px}
+.wave i{width:4px;border-radius:4px;background:var(--lm);animation:wv 1s ease-in-out infinite}
+@keyframes wv{50%{height:6px}}
+/* marquee */
+.mq{border-block:1px solid var(--line);overflow:hidden;padding:26px 0;background:var(--s1);direction:ltr}
+.mq div{display:flex;gap:60px;width:max-content;animation:mq 30s linear infinite}
+.mq span{font:600 28px 'Space Grotesk',sans-serif;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.35);white-space:nowrap;display:flex;align-items:center;gap:60px}
+.mq span::after{content:"✦";color:var(--lm);-webkit-text-stroke:0;font-size:20px}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.stat{background:var(--s1);padding:40px 28px;text-align:center}
+.stat b{font:700 52px 'Space Grotesk',sans-serif;display:block;line-height:1}
+.stat span{color:var(--mu);font-size:14px}
+/* services */
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sv{background:var(--s1);border:1px solid var(--line);border-radius:var(--r);padding:34px 30px;position:relative;overflow:hidden;min-height:250px;display:flex;flex-direction:column;justify-content:space-between;transition:.5s cubic-bezier(.2,.7,.2,1)}
+.sv::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(77,91,255,.22),transparent 45%);opacity:0;transition:.4s}
+.sv:hover::before{opacity:1}.sv:hover{border-color:rgba(123,134,255,.5);transform:translateY(-6px)}
+.sv>*{position:relative}
+.sv:nth-child(1),.sv:nth-child(4){grid-column:span 2}
+.ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:rgba(77,91,255,.15);border:1px solid rgba(123,134,255,.35);color:var(--lm);font-size:22px;margin-bottom:22px}
+.sv h3{font-size:20px;font-weight:600;margin-bottom:8px}.sv p{color:var(--mu);font-size:14px}
+.sv em{position:absolute;top:22px;left:26px;font:500 13px 'Space Grotesk',sans-serif;color:rgba(255,255,255,.25);font-style:normal}
+/* work */
+.wg{display:grid;grid-template-columns:1.4fr 1fr;gap:16px}
+.wk{border-radius:var(--r);border:1px solid var(--line);overflow:hidden;position:relative;min-height:340px;cursor:pointer;display:flex;align-items:flex-end;padding:30px;transition:.5s;background:var(--s1)}
+.wk:first-child{grid-row:span 2;min-height:520px}
+.wk .art{position:absolute;inset:0;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.wk:hover .art{transform:scale(1.08)}.wk:hover{border-color:var(--pr2)}
+.a1{background:radial-gradient(circle at 70% 25%,rgba(212,255,58,.35),transparent 40%),radial-gradient(circle at 20% 80%,rgba(77,91,255,.6),transparent 55%),#0d1020}
+.a2{background:conic-gradient(from 200deg at 30% 70%,#4d5bff,#0c0e15 40%,#d4ff3a55 70%,#0c0e15)}
+.a3{background:radial-gradient(circle at 80% 80%,rgba(77,91,255,.55),transparent 50%),repeating-linear-gradient(135deg,#10131c 0 18px,#0b0d14 18px 36px)}
+.wk::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,7,11,.9),transparent 60%)}
+.wk div.m{position:relative;z-index:2}
+.wk small{font:600 11px 'Space Grotesk',sans-serif;letter-spacing:.18em;color:var(--lm)}
+.wk h3{font-size:22px;margin:6px 0 2px}.wk p{color:var(--mu);font-size:13.5px}
+.arr{position:absolute;top:22px;left:22px;z-index:2;width:46px;height:46px;border-radius:50%;background:var(--lm);color:#000;display:grid;place-items:center;transform:scale(.5);opacity:0;transition:.4s}
+.wk:hover .arr{transform:none;opacity:1}
+.lb{position:fixed;inset:0;background:rgba(3,4,7,.92);backdrop-filter:blur(10px);z-index:500;display:grid;place-items:center;opacity:0;pointer-events:none;transition:.3s}
+.lb.open{opacity:1;pointer-events:auto}
+.lbi{width:min(900px,92%);aspect-ratio:16/9;border-radius:20px;border:1px solid var(--pr);display:grid;place-items:center;position:relative;background:radial-gradient(circle at 30% 20%,rgba(77,91,255,.4),transparent 55%),#0a0c13}
+.lbi span{font:700 clamp(26px,5vw,56px) 'Space Grotesk',sans-serif;text-align:center}
+.lbx{position:absolute;top:-54px;left:0;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);font-size:20px}
+/* process */
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.pg::before{content:"";position:absolute;top:28px;right:6%;left:6%;height:1px;background:linear-gradient(90deg,var(--pr),var(--lm))}
+.pst{padding:0 14px;text-align:center;position:relative}
+.pst b{width:56px;height:56px;border-radius:50%;background:var(--bg);border:1px solid var(--pr2);display:grid;place-items:center;margin:0 auto 20px;font:600 16px 'Space Grotesk',sans-serif;color:var(--lm);transition:.4s}
+.pst:hover b{background:var(--pr);transform:scale(1.12)}
+.pst h4{font-size:17px;margin-bottom:6px}.pst p{color:var(--mu);font-size:13.5px}
+/* pricing */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;padding:6px;border:1px solid var(--line);border-radius:999px;width:fit-content;margin-bottom:40px;background:var(--s1)}
+.tab{padding:10px 20px;border-radius:999px;color:var(--mu);font-size:13.5px;font-weight:500;transition:.3s;white-space:nowrap}
+.tab.on{background:var(--pr);color:#fff}.tab:hover:not(.on){color:var(--tx)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:16px}
+.pc{background:var(--s1);border:1px solid var(--line);border-radius:var(--r);padding:36px 28px;display:flex;flex-direction:column;position:relative;transition:.4s;animation:ci .5s both}
+@keyframes ci{from{opacity:0;transform:translateY(20px)}}
+.pc:hover{transform:translateY(-6px);border-color:rgba(123,134,255,.5)}
+.pc.f{background:linear-gradient(160deg,#1a1f4a,var(--s1) 70%);border-color:var(--pr2)}
+.pop{position:absolute;top:-13px;right:24px;background:var(--lm);color:#000;font-size:11px;font-weight:700;padding:4px 14px;border-radius:999px}
+.pc h3{font-size:18px;margin-bottom:12px;color:var(--mu);font-weight:500}
+.pr{font:700 44px 'Space Grotesk',sans-serif;line-height:1;margin-bottom:24px}.pr small{font:400 13px 'IBM Plex Sans Arabic';color:var(--mu)}
+.ft{list-style:none;flex-grow:1;margin-bottom:26px}
+.ft li{font-size:13.5px;color:#c4c9d8;margin-bottom:11px;padding-right:26px;position:relative}
+.ft li::before{content:"✓";position:absolute;right:0;color:var(--lm);font-weight:700}
+.cp{width:100%;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.18);font-weight:600;font-size:14px;transition:.3s}
+.cp:hover,.pc.f .cp{background:var(--lm);color:#000;border-color:var(--lm)}
+/* why */
+.wy{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.pls{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pl{background:var(--s1);border:1px solid var(--line);border-radius:18px;padding:26px;transition:.4s}
+.pl:hover{border-color:var(--pr2);transform:translateY(-4px)}
+.pl b{font:600 13px 'Space Grotesk',sans-serif;color:var(--lm);display:block;margin-bottom:8px}.pl h4{font-size:17px;margin-bottom:4px}.pl p{font-size:13px;color:var(--mu)}
+.bx{font:700 clamp(160px,24vw,300px)/1 'Space Grotesk',sans-serif;text-align:center;direction:ltr}
+/* testimonials */
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.qt{background:var(--s1);border:1px solid var(--line);border-radius:var(--r);padding:32px;transition:.4s}
+.qt:hover{border-color:var(--pr2);transform:translateY(-5px)}
+.st{color:var(--lm);letter-spacing:3px;margin-bottom:14px}.qt p{color:#c4c9d8;font-size:14.5px;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:12px}.who i{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--pr),var(--lm))}
+.who b{display:block;font-size:14.5px}.who small{color:var(--mu);font-size:12px}
+/* faq */
+.fq{max-width:820px}
+.fi{border:1px solid var(--line);border-radius:16px;margin-bottom:12px;background:var(--s1);transition:.3s}
+.fi.open{border-color:var(--pr2)}
+.fq-q{width:100%;text-align:right;padding:22px 26px;display:flex;justify-content:space-between;gap:20px;font-weight:600;font-size:15.5px}
+.fq-q i{font-style:normal;color:var(--lm);font-size:22px;transition:.35s}.fi.open .fq-q i{transform:rotate(45deg)}
+.fa{max-height:0;overflow:hidden;transition:max-height .45s;padding:0 26px;color:var(--mu);font-size:14.5px}
+.fi.open .fa{max-height:220px;padding-bottom:22px}
+/* contact */
+.cb{border:1px solid var(--line);border-radius:28px;padding:60px;display:grid;grid-template-columns:1fr 1.15fr;gap:56px;background:radial-gradient(ellipse at top left,rgba(77,91,255,.3),transparent 55%),var(--s1)}
+.cb ul{list-style:none;margin-top:28px;display:grid;gap:14px;color:var(--mu)}.cb li a{color:var(--lm);font-weight:600}
+.fm{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fd{display:flex;flex-direction:column;gap:7px}.fd.full{grid-column:1/-1}
+.fd label{font-size:12.5px;color:var(--mu);font-weight:500}
+.fd input,.fd select,.fd textarea{background:rgba(0,0,0,.35);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--tx);font:inherit;font-size:14px;outline:none;transition:.3s}
+.fd input:focus,.fd select:focus,.fd textarea:focus{border-color:var(--pr2);box-shadow:0 0 0 3px rgba(77,91,255,.2)}
+.fd textarea{min-height:100px;resize:vertical}.fd select option{background:#0c0e15}
+.fm .btn{grid-column:1/-1;justify-content:center}
+/* footer */
+footer{border-top:1px solid var(--line);padding:70px 0 30px;margin-top:40px;background:var(--s1)}
+.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+.fg p{color:var(--mu);font-size:14px;margin-top:16px;max-width:320px}
+.fg h5{font-size:14px;margin-bottom:16px}.fg a{display:block;color:var(--mu);font-size:14px;margin-bottom:10px;transition:.3s}.fg a:hover{color:var(--lm)}
+.cr{border-top:1px solid var(--line);padding-top:24px;color:var(--mu);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.wa{position:fixed;bottom:calc(24px + env(safe-area-inset-bottom,0px));left:24px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;z-index:99;font-size:26px;color:#fff;animation:wap 2.6s infinite;transition:.3s}
+.wa:hover{transform:scale(1.1)}
+@keyframes wap{50%{box-shadow:0 0 0 14px rgba(37,211,102,.15)}}
+.up{position:fixed;bottom:calc(24px + env(safe-area-inset-bottom,0px));right:24px;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--s2);display:grid;place-items:center;z-index:99;opacity:0;pointer-events:none;transition:.3s}
+.up.show{opacity:1;pointer-events:auto}
+@media(max-width:1024px){
+.links,.nav .btn{display:none}.burger{display:flex}
+.hg,.wy,.cb{grid-template-columns:1fr}.vis{height:480px}
+.sg,.tg{grid-template-columns:1fr 1fr}.sv:nth-child(1),.sv:nth-child(4){grid-column:auto}
+.wg{grid-template-columns:1fr}.wk:first-child{grid-row:auto;min-height:380px}
+.stats,.pg{grid-template-columns:1fr 1fr;gap:30px 0}.pg::before{display:none}.stats{gap:1px}
+.fg{grid-template-columns:1fr 1fr}.cb{padding:40px}}
+@media(max-width:700px){
+.sec{padding:80px 0}.sg,.tg,.fm,.pls{grid-template-columns:1fr}.fd.full{grid-column:auto}
+.tabs{border-radius:18px;width:100%}.vis{height:420px}.c1{left:0}.c3{width:200px}.c2{width:170px}
+.cb{padding:28px}.up{bottom:calc(92px + env(safe-area-inset-bottom,0px))}.stat b{font-size:38px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
+<div class="bar" id="bar"></div>
+<div class="pre" id="pre"><svg viewBox="0 0 48 48"><use href="#logo"/></svg></div>
+<svg width="0" height="0" style="position:absolute"><defs>
+<linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7b86ff"/><stop offset="1" stop-color="#d4ff3a"/></linearGradient>
+<g id="logo"><rect width="48" height="48" rx="14" fill="#0c0e15" stroke="rgba(255,255,255,.15)"/><path d="M14 14l20 20M34 14L14 34" stroke="url(#lg)" stroke-width="5" stroke-linecap="round"/></g></defs></svg>
 
-<div class="scroll-progress" id="scrollProgress"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
-<header class="topbar" id="topbar">
-  <nav class="nav container">
-    <a class="brand" href="#home">
-      <img class="brand-logo" src="https://i.ibb.co/N6wmf6hY/photo-2026-11-22-20-49-28.jpg" alt="X TREND logo">
-      <span>X <span>TREND</span> CO.</span>
-    </a>
-    <div class="nav-links">
-      <a href="#services">خدماتنا</a>
-      <a href="#portfolio">أعمالنا</a>
-      <a href="#pricing">الباقات</a>
-      <a href="#about">من نحن</a>
-      <a href="#faq">الأسئلة</a>
-      <a href="#contact">تواصل</a>
-    </div>
-    <a class="nav-cta" href="#contact">اطلب خدمتك ↗</a>
-  </nav>
-</header>
+<header class="nav" id="nav"><div class="wrap">
+<a class="brand" href="#home"><svg viewBox="0 0 48 48"><use href="#logo"/></svg><span>X<i>·</i>TREND</span></a>
+<nav class="links"><a href="#services">الخدمات</a><a href="#work">الأعمال</a><a href="#process">منهجنا</a><a href="#pricing">الباقات</a><a href="#faq">الأسئلة</a></nav>
+<a class="btn p" href="#contact">ابدأ مشروعك</a>
+<button class="burger" id="burger" aria-label="القائمة"><span></span><span></span><span></span></button>
+</div></header>
+<div class="mob" id="mob"><a href="#services">الخدمات</a><a href="#work">الأعمال</a><a href="#process">منهجنا</a><a href="#pricing">الباقات</a><a href="#contact">تواصل</a></div>
 
 <main>
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <div class="reveal">
-        <span class="eyebrow">Creative Studio · Est. 2024</span>
-        <h1 class="display">نصنع محتوى<br>يترك <em>علامة.</em></h1>
-        <p class="hero-copy">من أول فكرة لحد آخر لقطة، بنساعد علامتك التجارية تظهر بشكل مختلف. تصوير احترافي، صناعة محتوى، وإدارة سوشيال ميديا تصنع حضورًا يليق بطموحك.</p>
-        <div class="hero-actions">
-          <a class="btn-primary" href="#pricing">اكتشف الباقات ←</a>
-          <a class="btn-outline" href="#portfolio">شاهد أعمالنا ▶</a>
-        </div>
-      </div>
-      <div class="hero-art reveal" data-delay="2" id="heroArt">
-        <div class="hero-wordmark">X TREND</div>
-        <div class="hero-photo" id="heroPhoto"></div>
-        <div class="hero-stat">
-          <div><b>360°</b><span>CREATIVE</span></div>
-          <i></i>
-          <div><b>ONE</b><span>VISION</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="hero" id="home"><div class="orb o1"></div><div class="orb o2"></div>
+<div class="wrap hg">
+<div class="rv"><div class="pill"><b></b>استوديو إبداعي متكامل · القاهرة</div>
+<h1>نبني حضور<br>علامتك <span class="rot grad" id="rot"><span>بالصورة</span><span>بالمحتوى</span><span>بالصوت</span><span>بالقصة</span></span></h1>
+<p class="lead">شريكك الإبداعي من الفكرة إلى النشر: تصوير احترافي، صناعة محتوى، إدارة سوشيال ميديا، وبودكاست بمعايير تليق بالشركات الكبرى.</p>
+<div class="acts"><a class="btn p" href="#pricing">استعرض الباقات ←</a><a class="btn o" href="#work">شاهد أعمالنا</a></div></div>
+<div class="vis rv" data-d>
+<div class="card c1"><small>نمو التفاعل (مثال توضيحي)</small><div class="big grad">+248%</div>
+<div class="bars" id="bars"></div></div>
+<div class="card c2"><div class="rec"><b></b>REC · ستوديو</div><div class="wave" id="wave"></div></div>
+<div class="card c3"><small>المحتوى المنتج هذا الشهر</small><div class="big">36 <span style="font-size:15px;color:var(--mu)">فيديو</span></div></div>
+</div></div></section>
 
-  <section class="trust">
-    <div class="container trust-row reveal">
-      <div class="trust-item"><b>تصوير احترافي</b><span>تفاصيل تصنع الفرق</span></div>
-      <div class="trust-item"><b>صناعة محتوى</b><span>من الفكرة للنشر</span></div>
-      <div class="trust-item"><b>هوية متكاملة</b><span>حضور بصري متناسق</span></div>
-      <div class="trust-item"><b>شراكة مستمرة</b><span>نمو خطوة بخطوة</span></div>
-    </div>
-  </section>
+<div class="mq"><div id="mq"></div></div>
 
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">What We Do</span>
-        <h2>كل ما تحتاجه علامتك<br>في <span class="accent">مكان واحد.</span></h2>
-        <p>خدمات إبداعية متكاملة تساعدك تقدم مشروعك بأفضل صورة وتوصل رسالتك للجمهور المناسب.</p>
-      </div>
-      <div class="services-grid">
-        <article class="service-tile reveal"><div class="service-icon">◉</div><div><h3>إدارة السوشيال ميديا</h3><p>إدارة المنصات، تخطيط المحتوى، التصميم، النشر ومتابعة التفاعل.</p></div></article>
-        <article class="service-tile reveal" data-delay="1"><div class="service-icon">▣</div><div><h3>تصوير المحلات التجارية</h3><p>فيديوهات تبرز منتجاتك وتفاصيل المكان وتقدم تجربة جذابة لعملائك.</p></div></article>
-        <article class="service-tile reveal" data-delay="2"><div class="service-icon">✦</div><div><h3>تصوير المدرسين</h3><p>تصوير احترافي للحصص والريلز ومحتوى تعليمي يليق باسمك.</p></div></article>
-        <article class="service-tile reveal"><div class="service-icon">▶</div><div><h3>صناعة المحتوى</h3><p>أفكار وتصوير ومونتاج فيديوهات جاهزة للنشر على منصاتك.</p></div></article>
-        <article class="service-tile reveal" data-delay="1"><div class="service-icon">♫</div><div><h3>البودكاست</h3><p>تجهيز مساحة التسجيل والصوت والإضاءة لتقديم حلقات بجودة مميزة.</p></div></article>
-        <article class="service-tile reveal" data-delay="2"><div class="service-icon">✧</div><div><h3>حلول إبداعية مخصصة</h3><p>نصمم لك عرضًا يناسب هدفك واحتياجات مشروعك وميزانيتك.</p></div></article>
-      </div>
-    </div>
-  </section>
+<section class="sec" style="padding-bottom:0"><div class="wrap"><div class="stats rv" id="stats">
+<div class="stat"><b data-n="150" data-s="+">0</b><span>مشروع منفّذ</span></div>
+<div class="stat"><b data-n="60" data-s="+">0</b><span>عميل يثق بنا</span></div>
+<div class="stat"><b data-n="5" data-s="">0</b><span>خدمات متكاملة</span></div>
+<div class="stat"><b data-n="98" data-s="%">0</b><span>رضا العملاء</span></div>
+</div></div></section>
 
-  <section class="section" id="portfolio">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Selected Work</span>
-        <h2>الأفكار تستحق أن <span class="accent">تُرى.</span></h2>
-        <p>مساحة لعرض أفضل مشاريع التصوير والمونتاج والتصميم.</p>
-      </div>
-      <div class="portfolio-grid">
-        <article class="work-card reveal" data-lightbox="VISUAL STORY">
-          <div class="work-visual"><span class="visual-word">VISUAL<br>STORY</span><div class="play">▶</div></div>
-          <div class="work-meta"><small>VIDEO PRODUCTION</small><h3>تصوير منتجات وتجربة علامة</h3><p>مساحة مخصصة لفيديو من أعمالكم</p></div>
-        </article>
-        <article class="work-card reveal" data-delay="1" data-lightbox="BRAND MOOD">
-          <div class="work-visual"><span class="visual-word">BRAND<br>MOOD</span></div>
-          <div class="work-meta"><small>SOCIAL MEDIA</small><h3>هوية ومحتوى سوشيال</h3><p>مساحة لعرض تصميمات وحملات السوشيال</p></div>
-        </article>
-        <article class="work-card reveal" data-delay="2" data-lightbox="FRAME BY FRAME">
-          <div class="work-visual"><span class="visual-word">FRAME<br>BY FRAME</span><div class="play">▶</div></div>
-          <div class="work-meta"><small>COMMERCIAL SHOOT</small><h3>إعلان تجاري قصير</h3><p>مساحة لعرض فيديو إعلان أو ريل</p></div>
-        </article>
-      </div>
-    </div>
-  </section>
+<section class="sec" id="services"><div class="wrap">
+<div class="head rv"><span class="tag">Services</span><h2 class="t">منظومة إبداعية <span class="grad">تحت سقف واحد.</span></h2><p class="lead">كل ما تحتاجه علامتك لتظهر بشكل احترافي ومتسق، بفريق واحد ورؤية واحدة.</p></div>
+<div class="sg" id="sg"></div></div></section>
 
-  <section class="section" id="pricing">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Packages & Pricing</span>
-        <h2>اختار الباقة المناسبة<br><span class="accent">لطموحك.</span></h2>
-        <p>تفاصيل واضحة تساعدك تختار الخدمة المناسبة. اضغط على أي باقة لإرسال طلب حجز مبدئي.</p>
-      </div>
-      <div class="pricing-tabs reveal" id="pricingTabs">
-        <button class="tab active" data-plan="social">سوشيال ميديا</button>
-        <button class="tab" data-plan="stores">المحلات</button>
-        <button class="tab" data-plan="teachers">المدرسين</button>
-        <button class="tab" data-plan="content">صناعة المحتوى</button>
-        <button class="tab" data-plan="podcast">البودكاست</button>
-      </div>
-      <div id="pricingGrid" class="pricing-grid"></div>
-    </div>
-  </section>
+<section class="sec" id="work"><div class="wrap">
+<div class="head rv"><span class="tag">Selected Work</span><h2 class="t">أعمال تتحدث <span class="grad">عنّا.</span></h2><p class="lead">نماذج من مشاريعنا. استبدل هذه المساحات بفيديوهاتكم وصوركم الحقيقية.</p></div>
+<div class="wg">
+<article class="wk rv" data-lb="VISUAL STORY"><div class="art a1"></div><div class="arr">↗</div><div class="m"><small>VIDEO PRODUCTION</small><h3>تصوير منتجات وتجربة علامة</h3><p>فيلم قصير لعلامة تجارية</p></div></article>
+<article class="wk rv" data-lb="BRAND MOOD"><div class="art a2"></div><div class="arr">↗</div><div class="m"><small>SOCIAL MEDIA</small><h3>هوية ومحتوى سوشيال</h3><p>حملة متكاملة على المنصات</p></div></article>
+<article class="wk rv" data-lb="FRAME BY FRAME"><div class="art a3"></div><div class="arr">↗</div><div class="m"><small>COMMERCIAL</small><h3>إعلان تجاري قصير</h3><p>ريل إعلاني بإنتاج سينمائي</p></div></article>
+</div></div></section>
 
-  <section class="section" id="about">
-    <div class="container about-grid">
-      <div class="about-panel reveal">
-        <div class="big-x">X</div>
-        <p>نؤمن أن المحتوى القوي لا يلفت الانتباه فقط، بل يبني صورة ذهنية ويخلق علاقة حقيقية بين العلامة التجارية وجمهورها.</p>
-      </div>
-      <div class="about-copy reveal" data-delay="1">
-        <span class="eyebrow">Why X Trend</span>
-        <h2>مش مجرد تصوير.<br>دي <span class="accent">رؤية بتتحول لواقع.</span></h2>
-        <p>بنبدأ بفهم هدفك وجمهورك، وبعدها نختار الفكرة وطريقة التنفيذ المناسبة. هدفنا إن كل تفصيلة في المحتوى تخدم صورتك وتوصل رسالتك بوضوح.</p>
-        <div class="process">
-          <div class="step"><b>01</b><span>نفهم هدفك</span><small>نسمع فكرتك واحتياجك</small></div>
-          <div class="step"><b>02</b><span>نخطط وننفذ</span><small>نحول الفكرة لمحتوى</small></div>
-          <div class="step"><b>03</b><span>تستلم شغلك</span><small>محتوى جاهز للظهور</small></div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="sec" id="process"><div class="wrap">
+<div class="head rv" style="text-align:center;margin-inline:auto"><span class="tag">Our Method</span><h2 class="t">منهج واضح <span class="grad">ونتائج مضمونة.</span></h2></div>
+<div class="pg rv">
+<div class="pst"><b>01</b><h4>الاكتشاف</h4><p>نفهم هدفك وجمهورك ومنافسيك</p></div>
+<div class="pst"><b>02</b><h4>التخطيط</h4><p>فكرة وسيناريو وخطة تنفيذ واضحة</p></div>
+<div class="pst"><b>03</b><h4>الإنتاج</h4><p>تصوير ومونتاج بمعدات احترافية</p></div>
+<div class="pst"><b>04</b><h4>التسليم والنمو</h4><p>محتوى جاهز ومتابعة للنتائج</p></div>
+</div></div></section>
 
-  <section class="section" id="testimonials">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Client Love</span>
-        <h2>ثقة تُبنى مع <span class="accent">كل مشروع.</span></h2>
-      </div>
-      <div class="testimonials">
-        <div class="quote reveal"><div class="stars">★★★★★</div><p>ضع هنا رأي عميل حقيقي عن تجربة التصوير وجودة التنفيذ والتعامل.</p><strong>اسم العميل الأول</strong><small>اسم النشاط التجاري</small></div>
-        <div class="quote reveal" data-delay="1"><div class="stars">★★★★★</div><p>شارك تجربة عميل مع إدارة السوشيال ميديا أو صناعة المحتوى والنتيجة التي حققها.</p><strong>اسم العميل الثاني</strong><small>اسم النشاط التجاري</small></div>
-        <div class="quote reveal" data-delay="2"><div class="stars">★★★★★</div><p>أضف تعليقًا حقيقيًا يوضح ما الذي أعجب العميل في رحلة العمل مع X TREND.</p><strong>اسم العميل الثالث</strong><small>اسم النشاط التجاري</small></div>
-      </div>
-    </div>
-  </section>
+<section class="sec" id="pricing"><div class="wrap">
+<div class="head rv"><span class="tag">Packages</span><h2 class="t">باقات شفافة <span class="grad">لكل طموح.</span></h2><p class="lead">اختر الباقة المناسبة واضغط لإرسال طلب حجز مبدئي مباشرة على واتساب.</p></div>
+<div class="tabs rv" id="tabs">
+<button class="tab on" data-p="social">سوشيال ميديا</button><button class="tab" data-p="stores">المحلات</button><button class="tab" data-p="teachers">المدرسين</button><button class="tab" data-p="content">صناعة المحتوى</button><button class="tab" data-p="podcast">البودكاست</button></div>
+<div class="pgrid" id="pgrid"></div></div></section>
 
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">FAQ</span>
-        <h2>أسئلة <span class="accent">متكررة.</span></h2>
-      </div>
-      <div class="faq">
-        <div class="faq-item reveal"><button class="faq-q"><span>كام مدة تنفيذ المشروع؟</span><span>+</span></button><div class="faq-a"><p>حسب نوع الخدمة: الفيديوهات القصيرة من 2-4 أيام، إدارة السوشيال ميديا شهرية، البودكاست حسب عدد الحلقات.</p></div></div>
-        <div class="faq-item reveal" data-delay="1"><button class="faq-q"><span>هل في تعديلات بعد التسليم؟</span><span>+</span></button><div class="faq-a"><p>أيوه، كل باقة فيها عدد تعديلات مجانية. التعديلات الإضافية بتتكلف حسب حجمها.</p></div></div>
-        <div class="faq-item reveal" data-delay="2"><button class="faq-q"><span>طريقة الدفع إيه؟</span><span>+</span></button><div class="faq-a"><p>مقدم 50% قبل البدء و50% عند التسليم. بنقبل فودافون كاش، تحويل بنكي، أو كاش.</p></div></div>
-        <div class="faq-item reveal" data-delay="3"><button class="faq-q"><span>بتشتغلوا خارج القاهرة؟</span><span>+</span></button><div class="faq-a"><p>أيوه، بنغطي القاهرة الكبرى بشكل أساسي، وبنقدر نتحرك للمحافظات بتكلفة إضافية للانتقال.</p></div></div>
-      </div>
-    </div>
-  </section>
+<section class="sec" id="about"><div class="wrap wy">
+<div class="rv"><span class="tag">Why X Trend</span><h2 class="t">لسنا مجرد كاميرا،<br><span class="grad">نحن شريك نمو.</span></h2><p class="lead" style="margin-bottom:30px">نبدأ بفهم عملك، ثم نصنع محتوى يبني صورة ذهنية قوية ويخلق علاقة حقيقية بينك وبين جمهورك.</p>
+<div class="pls"><div class="pl"><b>01</b><h4>جودة سينمائية</h4><p>معدات وإضاءة بمعايير احترافية</p></div><div class="pl"><b>02</b><h4>التزام بالمواعيد</h4><p>تسليم منظم وفي الوقت المحدد</p></div><div class="pl"><b>03</b><h4>رؤية استراتيجية</h4><p>محتوى مبني على هدف واضح</p></div><div class="pl"><b>04</b><h4>دعم مستمر</h4><p>فريق متاح للمتابعة والتطوير</p></div></div></div>
+<div class="bx grad rv">X</div></div></section>
 
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="contact-box reveal">
-        <div class="contact-copy">
-          <span class="eyebrow">Let's Work Together</span>
-          <h2>جاهز تبدأ<br><span class="accent">حكاية جديدة؟</span></h2>
-          <p>احكيلنا عن مشروعك والخدمة اللي محتاجها، وسيتم تجهيز رسالة بطلبك لإرسالها مباشرة على واتساب.</p>
-          <div class="contact-links">
-            <span>◉ X TREND COMPANY</span>
-            <a href="https://wa.me/201014994070">✆ 01014994070</a>
-            <span>✧ القاهرة، مصر</span>
-          </div>
-        </div>
-        <form class="booking-form" id="bookingForm">
-          <div class="field"><label>الاسم بالكامل *</label><input id="clientName" required placeholder="اكتب اسمك"></div>
-          <div class="field"><label>رقم الهاتف *</label><input id="clientPhone" type="tel" required placeholder="01xxxxxxxxx"></div>
-          <div class="field"><label>الخدمة المطلوبة *</label>
-            <select id="serviceSelect" required>
-              <option value="">اختر الخدمة</option>
-              <option>إدارة السوشيال ميديا</option>
-              <option>تصوير المحلات التجارية</option>
-              <option>تصوير المدرسين</option>
-              <option>صناعة المحتوى</option>
-              <option>البودكاست</option>
-              <option>خدمة مخصصة</option>
-            </select>
-          </div>
-          <div class="field"><label>الباقة</label><select id="packageSelect"><option value="">اختار بعد تحديد الخدمة</option></select></div>
-          <div class="field full"><label>تفاصيل إضافية</label><textarea id="projectDetails" placeholder="احكيلنا محتاج إيه..."></textarea></div>
-          <button class="btn-primary" type="submit">إرسال طلب الحجز عبر واتساب ↗</button>
-        </form>
-      </div>
-    </div>
-  </section>
+<section class="sec" id="testimonials"><div class="wrap">
+<div class="head rv"><span class="tag">Testimonials</span><h2 class="t">ثقة تُبنى مع <span class="grad">كل مشروع.</span></h2></div>
+<div class="tg">
+<div class="qt rv"><div class="st">★★★★★</div><p>ضع هنا رأي عميل حقيقي عن تجربة التصوير وجودة التنفيذ والتعامل.</p><div class="who"><i></i><div><b>اسم العميل الأول</b><small>اسم النشاط التجاري</small></div></div></div>
+<div class="qt rv"><div class="st">★★★★★</div><p>شارك تجربة عميل مع إدارة السوشيال ميديا أو صناعة المحتوى والنتيجة التي حققها.</p><div class="who"><i></i><div><b>اسم العميل الثاني</b><small>اسم النشاط التجاري</small></div></div></div>
+<div class="qt rv"><div class="st">★★★★★</div><p>أضف تعليقًا حقيقيًا يوضح ما أعجب العميل في رحلة العمل مع X TREND.</p><div class="who"><i></i><div><b>اسم العميل الثالث</b><small>اسم النشاط التجاري</small></div></div></div>
+</div></div></section>
+
+<section class="sec" id="faq"><div class="wrap">
+<div class="head rv"><span class="tag">FAQ</span><h2 class="t">أسئلة <span class="grad">متكررة.</span></h2></div>
+<div class="fq">
+<div class="fi rv"><button class="fq-q"><span>كام مدة تنفيذ المشروع؟</span><i>+</i></button><div class="fa">حسب نوع الخدمة: الفيديوهات القصيرة من 2-4 أيام، إدارة السوشيال ميديا شهرية، البودكاست حسب عدد الحلقات.</div></div>
+<div class="fi rv"><button class="fq-q"><span>هل في تعديلات بعد التسليم؟</span><i>+</i></button><div class="fa">أيوه، كل باقة فيها عدد تعديلات مجانية. التعديلات الإضافية بتتكلف حسب حجمها.</div></div>
+<div class="fi rv"><button class="fq-q"><span>طريقة الدفع إيه؟</span><i>+</i></button><div class="fa">مقدم 50% قبل البدء و50% عند التسليم. بنقبل فودافون كاش، تحويل بنكي، أو كاش.</div></div>
+<div class="fi rv"><button class="fq-q"><span>بتشتغلوا خارج القاهرة؟</span><i>+</i></button><div class="fa">أيوه، بنغطي القاهرة الكبرى بشكل أساسي، وبنقدر نتحرك للمحافظات بتكلفة إضافية للانتقال.</div></div>
+</div></div></section>
+
+<section class="sec" id="contact"><div class="wrap"><div class="cb rv">
+<div><span class="tag">Let’s Talk</span><h2 class="t">جاهز تبدأ <span class="grad">مشروعك؟</span></h2><p class="lead">احكيلنا عن مشروعك وسنجهز رسالة بطلبك لإرسالها مباشرة على واتساب.</p>
+<ul><li>◉ X TREND COMPANY</li><li><a href="https://wa.me/201014994070">✆ 01014994070</a></li><li>✧ القاهرة، مصر</li></ul></div>
+<form class="fm" id="form">
+<div class="fd"><label>الاسم بالكامل *</label><input id="nm" required placeholder="اكتب اسمك"></div>
+<div class="fd"><label>رقم الهاتف *</label><input id="ph" type="tel" required placeholder="01xxxxxxxxx"></div>
+<div class="fd"><label>الخدمة المطلوبة *</label><select id="sv" required><option value="">اختر الخدمة</option><option>إدارة السوشيال ميديا</option><option>تصوير المحلات التجارية</option><option>تصوير المدرسين</option><option>صناعة المحتوى</option><option>البودكاست</option><option>خدمة مخصصة</option></select></div>
+<div class="fd"><label>الباقة</label><select id="pk"><option value="">اختر بعد تحديد الخدمة</option></select></div>
+<div class="fd full"><label>تفاصيل إضافية</label><textarea id="dt" placeholder="احكيلنا محتاج إيه..."></textarea></div>
+<button class="btn p" type="submit">إرسال الطلب عبر واتساب ↗</button></form>
+</div></div></section>
 </main>
 
-<div class="lightbox" id="lightbox">
-  <div class="lightbox-inner">
-    <span id="lightboxText">PREVIEW</span>
-    <div class="lightbox-close" id="lightboxClose">✕</div>
-  </div>
-</div>
+<div class="lb" id="lb"><div class="lbi"><span id="lbt">PREVIEW</span><button class="lbx" id="lbx" aria-label="إغلاق">✕</button></div></div>
 
-<footer>
-  <div class="container footer-row">
-    <a class="brand" href="#home">
-      <img class="brand-logo" src="https://i.ibb.co/N6wmf6hY/photo-2026-11-22-20-49-28.jpg" alt="X TREND">
-      <span>X <span>TREND</span> CO.</span>
-    </a>
-    <span>© <span id="year"></span> X TREND COMPANY. جميع الحقوق محفوظة.</span>
-    <div class="footer-links">
-      <a href="#services">الخدمات</a>
-      <a href="#pricing">الباقات</a>
-      <a href="#contact">تواصل</a>
-    </div>
-  </div>
-</footer>
+<footer><div class="wrap"><div class="fg">
+<div><a class="brand" href="#home"><svg viewBox="0 0 48 48"><use href="#logo"/></svg><span>X<i>·</i>TREND</span></a><p>استوديو إبداعي للتصوير وصناعة المحتوى وإدارة السوشيال ميديا والبودكاست.</p></div>
+<div><h5>الخدمات</h5><a href="#services">السوشيال ميديا</a><a href="#services">التصوير</a><a href="#services">البودكاست</a></div>
+<div><h5>الشركة</h5><a href="#about">من نحن</a><a href="#work">الأعمال</a><a href="#faq">الأسئلة</a></div>
+<div><h5>تواصل</h5><a href="https://wa.me/201014994070">واتساب</a><a href="#contact">احجز الآن</a></div>
+</div><div class="cr"><span>© <span id="yr"></span> X TREND COMPANY. جميع الحقوق محفوظة.</span><span>القاهرة · مصر</span></div></div></footer>
 
-<a class="whatsapp-float" href="https://wa.me/201014994070" target="_blank" aria-label="واتساب">✆</a>
-<button class="to-top" id="toTop" aria-label="العودة للأعلى">↑</button>
+<a class="wa" href="https://wa.me/201014994070" target="_blank" rel="noopener" aria-label="واتساب">✆</a>
+<button class="up" id="up" aria-label="للأعلى">↑</button>
 
 <script>
-  const WHATSAPP_NUMBER = "201014994070";
-  const packages = {
-    social: [
-      {name:"باقة أساسية",price:"2,500",unit:"جنيه / شهرياً",features:["إدارة منصات التواصل","تصميمات جذابة","مونتاج احترافي","نشر محتوى منتظم"]},
-      {name:"باقة ستاندرد",price:"3,500",unit:"جنيه / شهرياً",features:["إدارة جميع المنصات","تصميمات احترافية","مونتاج فيديوهات","متابعة التفاعل والنتائج"]},
-      {name:"باقة بريميوم",price:"5,000",unit:"جنيه / شهرياً",featured:true,features:["إدارة شاملة لجميع المنصات","تصميمات إبداعية متميزة","مونتاج احترافي للفيديوهات","صناعة محتوى متكامل","تطوير الهوية البصرية"]},
-      {name:"باقة مخصصة",price:"حسب هدفك",unit:"",custom:true,features:["حلول تسويقية مخصصة","تصميمات مبتكرة","استراتيجية محتوى مناسبة","أفكار إبداعية جديدة"]}
-    ],
-    stores: [
-      {name:"Starter",price:"500",unit:"جنيه",features:["فيديو واحد","تصوير احترافي","مونتاج احترافي"]},
-      {name:"Basic",price:"1,350",unit:"جنيه",features:["3 فيديوهات","تصوير احترافي","مونتاج احترافي"]},
-      {name:"Pro",price:"2,000",unit:"جنيه",features:["5 فيديوهات","تصوير احترافي","مونتاج احترافي","تصحيح ألوان وإضاءة"]},
-      {name:"Premium",price:"4,000",unit:"جنيه",features:["10 فيديوهات","تصوير احترافي","مونتاج احترافي","محتوى جاهز للنشر"]}
-    ],
-    teachers: [
-      {name:"ساعة تصوير",price:"300",unit:"جنيه",features:["ساعة تصوير في الشركة","تصوير احترافي"]},
-      {name:"6 ساعات تصوير",price:"1,500",unit:"جنيه",features:["6 ساعات تصوير فقط","تصوير احترافي"]},
-      {name:"6 ساعات + 3 ريلز",price:"2,500",unit:"جنيه",featured:true,features:["6 ساعات تصوير","2 ريلز في الشركة","1 ريلز في الحصه","محتوى يليق بطلابك"]}
-    ],
-    content: [
-      {name:"Starter",price:"600",unit:"جنيه",features:["تصوير فيديو واحد","مونتاج احترافي","تصحيح ألوان وإضاءة"]},
-      {name:"Basic",price:"1,500",unit:"جنيه",features:["تصوير 3 فيديوهات","مونتاج احترافي لكل فيديو","تصحيح ألوان وصوت","إضافة مؤثرات وانتقالات"]},
-      {name:"Pro",price:"2,750",unit:"جنيه",featured:true,features:["تصوير 5 فيديوهات","مونتاج احترافي","تنويع زوايا التصوير","معالجة ألوان وصوت","إضافة عناوين وحركات"]},
-      {name:"Premium",price:"5,000",unit:"جنيه",features:["تصوير 10 فيديوهات","مونتاج احترافي بالكامل","تنويع الأفكار وزوايا التصوير","معالجة ألوان وصوت","محتوى جاهز للنشر"]},
-      {name:"Elite",price:"5,700",unit:"جنيه",features:["تصوير 12 فيديو","مونتاج احترافي","أفكار متنوعة للمحتوى","معالجة ألوان وصوت","جرافيك وعناوين احترافية"]}
-    ],
-    podcast: [
-      {name:"Starter",price:"1,200",unit:"جنيه",features:["مدة التصوير: ساعة ونصف","تجهيز الشركة للتسجيل","تجربة الصوت قبل بداية التسجيل"]},
-      {name:"Standard",price:"1,500",unit:"جنيه",features:["مدة التصوير: ساعتين","تجهيز الشركة","تجربة الصوت والإضاءة","وقت إضافي للمحتوى والحلقات"]},
-      {name:"Professional",price:"2,100",unit:"جنيه",features:["مدة التصوير: 3 ساعات","تجهيز كامل للشركة","مناسبة لتسجيل أكثر من حلقة","مرونة أكبر في التصوير"]},
-      {name:"Premium",price:"2,700",unit:"جنيه",featured:true,features:["مدة التصوير: 4 ساعات","تجهيز كامل للشركة","مناسبة لصناعة المحتوى والبرامج","وقت كافٍ لتسجيل عدة حلقات"]}
-    ]
-  };
-  const categoryNames = {social:"إدارة السوشيال ميديا",stores:"تصوير المحلات التجارية",teachers:"تصوير المدرسين",content:"صناعة المحتوى",podcast:"البودكاست"};
-  const grid = document.getElementById("pricingGrid");
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],WA="201014994070";
+const P={
+social:[{n:"باقة أساسية",p:"2,500",u:"جنيه / شهرياً",f:["إدارة منصات التواصل","تصميمات جذابة","مونتاج احترافي","نشر محتوى منتظم"]},{n:"باقة ستاندرد",p:"3,500",u:"جنيه / شهرياً",f:["إدارة جميع المنصات","تصميمات احترافية","مونتاج فيديوهات","متابعة التفاعل والنتائج"]},{n:"باقة بريميوم",p:"5,000",u:"جنيه / شهرياً",h:1,f:["إدارة شاملة لجميع المنصات","تصميمات إبداعية متميزة","مونتاج احترافي للفيديوهات","صناعة محتوى متكامل","تطوير الهوية البصرية"]},{n:"باقة مخصصة",p:"حسب هدفك",u:"",f:["حلول تسويقية مخصصة","تصميمات مبتكرة","استراتيجية محتوى مناسبة","أفكار إبداعية جديدة"]}],
+stores:[{n:"Starter",p:"500",u:"جنيه",f:["فيديو واحد","تصوير احترافي","مونتاج احترافي"]},{n:"Basic",p:"1,350",u:"جنيه",f:["3 فيديوهات","تصوير احترافي","مونتاج احترافي"]},{n:"Pro",p:"2,000",u:"جنيه",f:["5 فيديوهات","تصوير احترافي","مونتاج احترافي","تصحيح ألوان وإضاءة"]},{n:"Premium",p:"4,000",u:"جنيه",f:["10 فيديوهات","تصوير احترافي","مونتاج احترافي","محتوى جاهز للنشر"]}],
+teachers:[{n:"ساعة تصوير",p:"300",u:"جنيه",f:["ساعة تصوير في الشركة","تصوير احترافي"]},{n:"6 ساعات تصوير",p:"1,500",u:"جنيه",f:["6 ساعات تصوير فقط","تصوير احترافي"]},{n:"6 ساعات + 3 ريلز",p:"2,500",u:"جنيه",h:1,f:["6 ساعات تصوير","2 ريلز في الشركة","1 ريلز في الحصه","محتوى يليق بطلابك"]}],
+content:[{n:"Starter",p:"600",u:"جنيه",f:["تصوير فيديو واحد","مونتاج احترافي","تصحيح ألوان وإضاءة"]},{n:"Basic",p:"1,500",u:"جنيه",f:["تصوير 3 فيديوهات","مونتاج احترافي لكل فيديو","تصحيح ألوان وصوت","إضافة مؤثرات وانتقالات"]},{n:"Pro",p:"2,750",u:"جنيه",h:1,f:["تصوير 5 فيديوهات","مونتاج احترافي","تنويع زوايا التصوير","معالجة ألوان وصوت","إضافة عناوين وحركات"]},{n:"Premium",p:"5,000",u:"جنيه",f:["تصوير 10 فيديوهات","مونتاج احترافي بالكامل","تنويع الأفكار وزوايا التصوير","معالجة ألوان وصوت","محتوى جاهز للنشر"]},{n:"Elite",p:"5,700",u:"جنيه",f:["تصوير 12 فيديو","مونتاج احترافي","أفكار متنوعة للمحتوى","معالجة ألوان وصوت","جرافيك وعناوين احترافية"]}],
+podcast:[{n:"Starter",p:"1,200",u:"جنيه",f:["مدة التصوير: ساعة ونصف","تجهيز الشركة للتسجيل","تجربة الصوت قبل بداية التسجيل"]},{n:"Standard",p:"1,500",u:"جنيه",f:["مدة التصوير: ساعتين","تجهيز الشركة","تجربة الصوت والإضاءة","وقت إضافي للمحتوى والحلقات"]},{n:"Professional",p:"2,100",u:"جنيه",f:["مدة التصوير: 3 ساعات","تجهيز كامل للشركة","مناسبة لتسجيل أكثر من حلقة","مرونة أكبر في التصوير"]},{n:"Premium",p:"2,700",u:"جنيه",h:1,f:["مدة التصوير: 4 ساعات","تجهيز كامل للشركة","مناسبة لصناعة المحتوى والبرامج","وقت كافٍ لتسجيل عدة حلقات"]}]};
+const CN={social:"إدارة السوشيال ميديا",stores:"تصوير المحلات التجارية",teachers:"تصوير المدرسين",content:"صناعة المحتوى",podcast:"البودكاست"};
+const S=[["◉","إدارة السوشيال ميديا","إدارة المنصات، تخطيط المحتوى، التصميم، النشر ومتابعة التفاعل."],["▣","تصوير المحلات التجارية","فيديوهات تبرز منتجاتك وتفاصيل المكان."],["✦","تصوير المدرسين","تصوير احترافي للحصص والريلز والمحتوى التعليمي."],["▶","صناعة المحتوى","أفكار وتصوير ومونتاج فيديوهات جاهزة للنشر."],["♫","البودكاست","تجهيز الصوت والإضاءة والمساحة لحلقات بجودة مميزة."],["✧","حلول مخصصة","عرض يناسب هدفك واحتياجات مشروعك وميزانيتك."]];
+$("#sg").innerHTML=S.map((s,i)=>`<article class="sv rv"><em>0${i+1}</em><div class="ic">${s[0]}</div><div><h3>${s[1]}</h3><p>${s[2]}</p></div></article>`).join("");
+const words=["تصوير","محتوى","سوشيال ميديا","بودكاست","هوية بصرية","مونتاج"];
+$("#mq").innerHTML=[...words,...words].map(w=>`<span>${w}</span>`).join("");
+$("#bars").innerHTML=[30,45,38,60,52,72,66,88,100].map((h,i)=>`<i style="height:${h}%;animation-delay:${.4+i*.08}s"></i>`).join("");
+$("#wave").innerHTML=Array.from({length:22},(_,i)=>`<i style="height:${10+Math.abs(Math.sin(i))*30}px;animation-delay:${i*.07}s"></i>`).join("");
 
-  function renderPackages(category){
-    grid.innerHTML = packages[category].map((p,i)=>`
-      <article class="price-card ${p.featured?"featured":""}" style="animation-delay:${i*.06}s">
-        ${p.featured?'<span class="popular">الأكثر طلباً</span>':""}
-        <h3>${p.name}</h3>
-        <div class="price">${p.price}${p.unit?` <small>${p.unit}</small>`:""}</div>
-        <ul class="features">${p.features.map(f=>`<li>${f}</li>`).join("")}</ul>
-        <button class="choose-plan" type="button" data-package="${p.name}">اطلب الباقة ←</button>
-      </article>`).join("");
-    grid.querySelectorAll(".choose-plan").forEach(btn=>btn.addEventListener("click",()=>{
-      document.getElementById("serviceSelect").value = categoryNames[category];
-      updatePackageOptions();
-      document.getElementById("packageSelect").value = btn.dataset.package;
-      document.getElementById("contact").scrollIntoView({behavior:"smooth"});
-    }));
-  }
+const grid=$("#pgrid"),sv=$("#sv"),pk=$("#pk");
+function render(c){grid.innerHTML=P[c].map((p,i)=>`<article class="pc ${p.h?"f":""}" style="animation-delay:${i*.06}s">${p.h?'<span class="pop">الأكثر طلباً</span>':""}<h3>${p.n}</h3><div class="pr">${p.p}${p.u?` <small>${p.u}</small>`:""}</div><ul class="ft">${p.f.map(f=>`<li>${f}</li>`).join("")}</ul><button class="cp" type="button" data-n="${p.n}">اطلب الباقة ←</button></article>`).join("");
+$$(".cp").forEach(b=>b.onclick=()=>{sv.value=CN[c];opts();pk.value=b.dataset.n;$("#contact").scrollIntoView({behavior:"smooth"})})}
+function opts(){const k=Object.keys(CN).find(k=>CN[k]===sv.value);pk.innerHTML='<option value="">اختر الباقة</option>';
+(k?P[k].map(p=>p.n):["باقة مخصصة"]).forEach(n=>{const o=document.createElement("option");o.value=o.textContent=n;pk.appendChild(o)})}
+sv.onchange=opts;
+$$(".tab").forEach(t=>t.onclick=()=>{$$(".tab").forEach(x=>x.classList.remove("on"));t.classList.add("on");render(t.dataset.p)});
+render("social");
 
-  document.querySelectorAll(".tab").forEach(tab=>tab.addEventListener("click",()=>{
-    document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
-    tab.classList.add("active");
-    renderPackages(tab.dataset.plan);
-  }));
+$("#form").onsubmit=e=>{e.preventDefault();const n=$("#nm").value.trim(),p=$("#ph").value.trim();if(!n||!p)return;
+const m=["مرحباً X TREND COMPANY، أريد إرسال طلب حجز مبدئي.",`الاسم: ${n}`,`رقم الهاتف: ${p}`,`الخدمة: ${sv.value}`,`الباقة: ${pk.value||"لم يتم التحديد"}`,`تفاصيل إضافية: ${$("#dt").value.trim()||"لا يوجد"}`].join("\n");
+window.open(`https://wa.me/${WA}?text=${encodeURIComponent(m)}`,"_blank","noopener")};
 
-  const serviceSelect=document.getElementById("serviceSelect"), packageSelect=document.getElementById("packageSelect");
-  function categoryFromService(v){return Object.keys(categoryNames).find(k=>categoryNames[k]===v)}
-  function updatePackageOptions(){
-    const key=categoryFromService(serviceSelect.value);
-    packageSelect.innerHTML='<option value="">اختر الباقة</option>';
-    if(key && packages[key]) packages[key].forEach(p=>{const o=document.createElement("option");o.value=p.name;o.textContent=p.name;packageSelect.appendChild(o)});
-    else {const o=document.createElement("option");o.value="باقة مخصصة";o.textContent="باقة مخصصة";packageSelect.appendChild(o)}
-  }
-  serviceSelect.addEventListener("change",updatePackageOptions);
+$("#yr").textContent=new Date().getFullYear();
+addEventListener("load",()=>setTimeout(()=>$("#pre").classList.add("off"),500));
+const nav=$("#nav"),bar=$("#bar"),up=$("#up");
+addEventListener("scroll",()=>{const h=document.documentElement,y=h.scrollTop;bar.style.width=y/(h.scrollHeight-h.clientHeight)*100+"%";nav.classList.toggle("sc",y>40);up.classList.toggle("show",y>600)},{passive:true});
+up.onclick=()=>scrollTo({top:0,behavior:"smooth"});
+const bg=$("#burger"),mob=$("#mob");
+function tg(o){bg.classList.toggle("x",o);mob.classList.toggle("open",o);document.body.style.overflow=o?"hidden":""}
+bg.onclick=()=>tg(!mob.classList.contains("open"));$$("#mob a").forEach(a=>a.onclick=()=>tg(false));
 
-  document.getElementById("bookingForm").addEventListener("submit",e=>{
-    e.preventDefault();
-    const name=document.getElementById("clientName").value.trim();
-    const phone=document.getElementById("clientPhone").value.trim();
-    if(!name || !phone){alert("من فضلك اكتب الاسم ورقم الهاتف.");return}
-    const data=["مرحباً X TREND COMPANY، أريد إرسال طلب حجز مبدئي.",`الاسم: ${name}`,`رقم الهاتف: ${phone}`,`الخدمة: ${serviceSelect.value}`,`الباقة: ${packageSelect.value || "لم يتم التحديد"}`,`تفاصيل إضافية: ${document.getElementById("projectDetails").value.trim() || "لا يوجد"}`].join("\n");
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(data)}`,"_blank","noopener");
-  });
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}}),{threshold:.12});
+$$(".rv").forEach((el,i)=>{el.style.transitionDelay=(i%3)*.08+"s";io.observe(el)});
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);
+$$("#stats b").forEach(b=>{const t=+b.dataset.n,s=b.dataset.s,t0=performance.now();(function f(n){const k=Math.min((n-t0)/1600,1);b.textContent=Math.round(t*(1-Math.pow(1-k,3)))+s;if(k<1)requestAnimationFrame(f)})(t0)})}),{threshold:.4});
+cio.observe($("#stats"));
 
-  document.getElementById("year").textContent=new Date().getFullYear();
-  renderPackages("social");
+const rot=$("#rot"),rs=rot.children;let ri=0;
+function rh(){[...rs].forEach(s=>s.style.height="1.15em")}rh();
+setInterval(()=>{ri=(ri+1)%rs.length;rs[0].style.marginTop=`-${ri*1.15}em`;rs[0].style.transition="margin .6s cubic-bezier(.7,0,.2,1)"},2400);
 
-  /* Scroll progress + topbar */
-  const progress=document.getElementById("scrollProgress");
-  const topbar=document.getElementById("topbar");
-  const toTop=document.getElementById("toTop");
-  window.addEventListener("scroll",()=>{
-    const h=document.documentElement;
-    const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
-    progress.style.width=pct+"%";
-    topbar.classList.toggle("scrolled",h.scrollTop>40);
-    toTop.classList.toggle("show",h.scrollTop>600);
-  });
-  toTop.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
-
-  /* Cursor */
-  const dot=document.getElementById("cursorDot"), ring=document.getElementById("cursorRing");
-  let mx=0,my=0,rx=0,ry=0;
-  document.addEventListener("mousemove",e=>{
-    mx=e.clientX;my=e.clientY;
-    dot.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`;
-  });
-  (function loop(){
-    rx+=(mx-rx)*.15; ry+=(my-ry)*.15;
-    ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`;
-    requestAnimationFrame(loop);
-  })();
-  document.querySelectorAll("a,button,.work-card,.service-tile,.price-card").forEach(el=>{
-    el.addEventListener("mouseenter",()=>ring.classList.add("hover"));
-    el.addEventListener("mouseleave",()=>ring.classList.remove("hover"));
-  });
-
-  /* Reveal */
-  const io=new IntersectionObserver(entries=>{
-    entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add("visible");io.unobserve(en.target)}});
-  },{threshold:.14});
-  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
-
-  /* Hero parallax */
-  const heroPhoto=document.getElementById("heroPhoto"), heroArt=document.getElementById("heroArt");
-  heroArt.addEventListener("mousemove",e=>{
-    const r=heroArt.getBoundingClientRect();
-    const x=(e.clientX-r.left)/r.width-.5;
-    const y=(e.clientY-r.top)/r.height-.5;
-    heroPhoto.style.transform=`translate(${x*18}px,${y*18}px) scale(1.03)`;
-  });
-  heroArt.addEventListener("mouseleave",()=>heroPhoto.style.transform="");
-
-  /* Spotlight */
-  document.querySelectorAll(".service-tile").forEach(tile=>{
-    tile.addEventListener("mousemove",e=>{
-      const r=tile.getBoundingClientRect();
-      tile.style.setProperty("--mx",(e.clientX-r.left)+"px");
-      tile.style.setProperty("--my",(e.clientY-r.top)+"px");
-    });
-  });
-
-  /* Lightbox */
-  const lightbox=document.getElementById("lightbox");
-  const lightboxText=document.getElementById("lightboxText");
-  document.querySelectorAll(".work-card").forEach(card=>{
-    card.addEventListener("click",()=>{
-      lightboxText.textContent=card.dataset.lightbox||"PREVIEW";
-      lightbox.classList.add("open");
-    });
-  });
-  document.getElementById("lightboxClose").addEventListener("click",()=>lightbox.classList.remove("open"));
-  lightbox.addEventListener("click",e=>{if(e.target===lightbox)lightbox.classList.remove("open")});
-
-  /* FAQ */
-  document.querySelectorAll(".faq-q").forEach(q=>{
-    q.addEventListener("click",()=>{
-      const item=q.parentElement;
-      const wasOpen=item.classList.contains("open");
-      document.querySelectorAll(".faq-item").forEach(i=>i.classList.remove("open"));
-      if(!wasOpen)item.classList.add("open");
-    });
-  });
+$$(".sv").forEach(t=>t.addEventListener("mousemove",e=>{const r=t.getBoundingClientRect();t.style.setProperty("--mx",e.clientX-r.left+"px");t.style.setProperty("--my",e.clientY-r.top+"px")}));
+const lb=$("#lb");
+$$(".wk").forEach(c=>c.onclick=()=>{$("#lbt").textContent=c.dataset.lb;lb.classList.add("open")});
+$("#lbx").onclick=()=>lb.classList.remove("open");lb.onclick=e=>{if(e.target===lb)lb.classList.remove("open")};
+addEventListener("keydown",e=>{if(e.key==="Escape")lb.classList.remove("open")});
+$$(".fq-q").forEach(q=>q.onclick=()=>{const i=q.parentElement,o=i.classList.contains("open");$$(".fi").forEach(x=>x.classList.remove("open"));if(!o)i.classList.add("open")});
 </script>
 </body>
 </html>
